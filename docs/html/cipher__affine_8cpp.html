@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Файл cipher_affine.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cipher__affine_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл cipher_affine.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="cipher_8h_source.html">cipher.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a13af83f07b8e0018fe7d7115ef2c176b" id="r_a13af83f07b8e0018fe7d7115ef2c176b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__affine_8cpp.html#a13af83f07b8e0018fe7d7115ef2c176b">inverse_by_mod</a> (int number, int mod)</td></tr>
+<tr class="memdesc:a13af83f07b8e0018fe7d7115ef2c176b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет обратный элемент числа по заданному модулю  <br /></td></tr>
+<tr class="separator:a13af83f07b8e0018fe7d7115ef2c176b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e075b4453a73c6548e527b6b924c3b7" id="r_a4e075b4453a73c6548e527b6b924c3b7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__affine_8cpp.html#a4e075b4453a73c6548e527b6b924c3b7">affine_encryption</a> (std::string plaintext, int alpha_key, int beta_key)</td></tr>
+<tr class="memdesc:a4e075b4453a73c6548e527b6b924c3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст аффинным шифром  <br /></td></tr>
+<tr class="separator:a4e075b4453a73c6548e527b6b924c3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8791a2a96023c3533137d3cafd59bc01" id="r_a8791a2a96023c3533137d3cafd59bc01"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__affine_8cpp.html#a8791a2a96023c3533137d3cafd59bc01">affine_decryption</a> (std::string ciphertext, int alpha_key, int beta_key)</td></tr>
+<tr class="memdesc:a8791a2a96023c3533137d3cafd59bc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный аффинным шифром  <br /></td></tr>
+<tr class="separator:a8791a2a96023c3533137d3cafd59bc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7be871b472a73e83843d1ee04269c1" id="r_aea7be871b472a73e83843d1ee04269c1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__affine_8cpp.html#aea7be871b472a73e83843d1ee04269c1">brute_force_affine</a> (std::string text)</td></tr>
+<tr class="memdesc:aea7be871b472a73e83843d1ee04269c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перебирает все допустимые ключи и возвращает наиболее осмысленную расшифровку (афинный шифр)  <br /></td></tr>
+<tr class="separator:aea7be871b472a73e83843d1ee04269c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a8791a2a96023c3533137d3cafd59bc01" name="a8791a2a96023c3533137d3cafd59bc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8791a2a96023c3533137d3cafd59bc01">&#9670;&#160;</a></span>affine_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный аффинным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">alpha_key</td><td>Ключ a, использованный при шифровании </td></tr>
+    <tr><td class="paramname">beta_key</td><td>Ключ b, использованный при шифровании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Исходный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит или alpha_key не взаимно простое с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e075b4453a73c6548e527b6b924c3b7" name="a4e075b4453a73c6548e527b6b924c3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e075b4453a73c6548e527b6b924c3b7">&#9670;&#160;</a></span>affine_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст аффинным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+    <tr><td class="paramname">alpha_key</td><td>Ключ a (должен быть взаимно прост с 26) </td></tr>
+    <tr><td class="paramname">beta_key</td><td>Ключ b (сдвиг) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит или alpha_key не взаимно простое с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea7be871b472a73e83843d1ee04269c1" name="aea7be871b472a73e83843d1ee04269c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7be871b472a73e83843d1ee04269c1">&#9670;&#160;</a></span>brute_force_affine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string brute_force_affine </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перебирает все допустимые ключи и возвращает наиболее осмысленную расшифровку (афинный шифр) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Лучший ключ + оценка </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13af83f07b8e0018fe7d7115ef2c176b" name="a13af83f07b8e0018fe7d7115ef2c176b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13af83f07b8e0018fe7d7115ef2c176b">&#9670;&#160;</a></span>inverse_by_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inverse_by_mod </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ищет обратный элемент числа по заданному модулю </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Число, для которого ищется обратное </td></tr>
+    <tr><td class="paramname">mod</td><td>Модуль </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Обратный элемент (i * number) % mod == 1 </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если number не взаимно просто с mod </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cipher__affine_8cpp.html">cipher_affine.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

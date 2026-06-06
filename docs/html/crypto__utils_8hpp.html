@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Файл crypto_utils.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('crypto__utils_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл crypto_utils.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div>
+<p><a href="crypto__utils_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1CipherError.html">crypto::CipherError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1InvalidKeyError.html">crypto::InvalidKeyError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1InvalidInputError.html">crypto::InvalidInputError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1MatrixError.html">crypto::MatrixError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1NonInvertibleMatrixError.html">crypto::NonInvertibleMatrixError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1CryptanalysisError.html">crypto::CryptanalysisError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html">crypto::Matrix</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacecrypto" id="r_namespacecrypto"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html">crypto</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a307b2ada11e46354a367634038437382" id="r_a307b2ada11e46354a367634038437382"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a307b2ada11e46354a367634038437382">crypto::Mod</a> (long long value, int modulus)</td></tr>
+<tr class="separator:a307b2ada11e46354a367634038437382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef022dbf9773799dcd23489c9c1853a" id="r_a9ef022dbf9773799dcd23489c9c1853a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a9ef022dbf9773799dcd23489c9c1853a">crypto::Gcd</a> (int a, int b)</td></tr>
+<tr class="separator:a9ef022dbf9773799dcd23489c9c1853a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978dcd1f5431771c8456c06c7dea2731" id="r_a978dcd1f5431771c8456c06c7dea2731"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a978dcd1f5431771c8456c06c7dea2731">crypto::ModInverse</a> (int value, int modulus)</td></tr>
+<tr class="separator:a978dcd1f5431771c8456c06c7dea2731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada28cac115b1c5289de58f384559143e" id="r_ada28cac115b1c5289de58f384559143e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#ada28cac115b1c5289de58f384559143e">crypto::IsLetter</a> (char c)</td></tr>
+<tr class="separator:ada28cac115b1c5289de58f384559143e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef77b6275dd7f30c24f7b1242bb899cf" id="r_aef77b6275dd7f30c24f7b1242bb899cf"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#aef77b6275dd7f30c24f7b1242bb899cf">crypto::ToUpperLetter</a> (char c)</td></tr>
+<tr class="separator:aef77b6275dd7f30c24f7b1242bb899cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb813d9ec7a0950363fbd9723421cf1" id="r_a3fb813d9ec7a0950363fbd9723421cf1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a3fb813d9ec7a0950363fbd9723421cf1">crypto::Normalize</a> (const std::string &amp;text)</td></tr>
+<tr class="separator:a3fb813d9ec7a0950363fbd9723421cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee80976ae3189ddb5bb163ea9783bda" id="r_a6ee80976ae3189ddb5bb163ea9783bda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a6ee80976ae3189ddb5bb163ea9783bda">crypto::LetterToIndex</a> (char c)</td></tr>
+<tr class="separator:a6ee80976ae3189ddb5bb163ea9783bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58941033fd561433b26aba0460639223" id="r_a58941033fd561433b26aba0460639223"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a58941033fd561433b26aba0460639223">crypto::IndexToLetter</a> (int index)</td></tr>
+<tr class="separator:a58941033fd561433b26aba0460639223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ae04d7f5b05ba87c8cdf9046360de2ec7" id="r_ae04d7f5b05ba87c8cdf9046360de2ec7"><td class="memItemLeft" align="right" valign="top">constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#ae04d7f5b05ba87c8cdf9046360de2ec7">crypto::kAlphabet</a> [] = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td></tr>
+<tr class="separator:ae04d7f5b05ba87c8cdf9046360de2ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d345b6133081d3c8b73ade8334f8888" id="r_a3d345b6133081d3c8b73ade8334f8888"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#a3d345b6133081d3c8b73ade8334f8888">crypto::kAlphabetSize</a> = 26</td></tr>
+<tr class="separator:a3d345b6133081d3c8b73ade8334f8888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cf75d372ea8884bb73c8c89840832a" id="r_ae1cf75d372ea8884bb73c8c89840832a"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">crypto::kModulus</a> = 26</td></tr>
+<tr class="separator:ae1cf75d372ea8884bb73c8c89840832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="crypto__utils_8hpp.html">crypto_utils.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

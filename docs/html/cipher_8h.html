@@ -1,0 +1,1912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Файл cipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cipher_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл cipher.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div>
+<p><a href="cipher_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a898a296e2cbf8d9eb7774299800474fa" id="r_a898a296e2cbf8d9eb7774299800474fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a898a296e2cbf8d9eb7774299800474fa">to_upper</a> (std::string text)</td></tr>
+<tr class="memdesc:a898a296e2cbf8d9eb7774299800474fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приводит текст к верхнему регистру  <br /></td></tr>
+<tr class="separator:a898a296e2cbf8d9eb7774299800474fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ba577e4f6410a91fe9bac630d6401f" id="r_ad1ba577e4f6410a91fe9bac630d6401f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ad1ba577e4f6410a91fe9bac630d6401f">to_lower</a> (std::string text)</td></tr>
+<tr class="memdesc:ad1ba577e4f6410a91fe9bac630d6401f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приводит текст к нижнему регистру  <br /></td></tr>
+<tr class="separator:ad1ba577e4f6410a91fe9bac630d6401f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657770424b6dcf369f510cfb3bc8b1f3" id="r_a657770424b6dcf369f510cfb3bc8b1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a657770424b6dcf369f510cfb3bc8b1f3">check_is_english</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a657770424b6dcf369f510cfb3bc8b1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, что нет букв, кроме английских  <br /></td></tr>
+<tr class="separator:a657770424b6dcf369f510cfb3bc8b1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e0c66673506064ecc3e3d202da3512" id="r_a67e0c66673506064ecc3e3d202da3512"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a67e0c66673506064ecc3e3d202da3512">random_gamma</a> (int length)</td></tr>
+<tr class="memdesc:a67e0c66673506064ecc3e3d202da3512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генерирует случайную гамму заданной длины  <br /></td></tr>
+<tr class="separator:a67e0c66673506064ecc3e3d202da3512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8555adb0359d3c6c2307a8995a007842" id="r_a8555adb0359d3c6c2307a8995a007842"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a8555adb0359d3c6c2307a8995a007842">text_to_index</a> (std::string text)</td></tr>
+<tr class="memdesc:a8555adb0359d3c6c2307a8995a007842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Составляет список индексов букв текста  <br /></td></tr>
+<tr class="separator:a8555adb0359d3c6c2307a8995a007842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6917b793d1ed5d6ac0b94254794b0ce8" id="r_a6917b793d1ed5d6ac0b94254794b0ce8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a6917b793d1ed5d6ac0b94254794b0ce8">index_to_text</a> (std::vector&lt; int &gt; index)</td></tr>
+<tr class="memdesc:a6917b793d1ed5d6ac0b94254794b0ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Составляет строку из букв по их индексам  <br /></td></tr>
+<tr class="separator:a6917b793d1ed5d6ac0b94254794b0ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8810e54ee77e34a87b140f0d6b93fa0c" id="r_a8810e54ee77e34a87b140f0d6b93fa0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a8810e54ee77e34a87b140f0d6b93fa0c">encryption_with_random_gamma</a> (std::string plaintext)</td></tr>
+<tr class="memdesc:a8810e54ee77e34a87b140f0d6b93fa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает гаммированием со случайной гаммой  <br /></td></tr>
+<tr class="separator:a8810e54ee77e34a87b140f0d6b93fa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cff97a6138b28f106fc352cb1093863" id="r_a1cff97a6138b28f106fc352cb1093863"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a1cff97a6138b28f106fc352cb1093863">encryption_with_user_gamma</a> (std::string plaintext, std::string gamma)</td></tr>
+<tr class="memdesc:a1cff97a6138b28f106fc352cb1093863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст гаммированием с помощью гаммы от пользователя  <br /></td></tr>
+<tr class="separator:a1cff97a6138b28f106fc352cb1093863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d7315b24f3c3248a0f74dcbeea6d9c" id="r_af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#af6d7315b24f3c3248a0f74dcbeea6d9c">gamma_decryption</a> (std::string ciphertext, std::string gamma)</td></tr>
+<tr class="memdesc:af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный гаммированием  <br /></td></tr>
+<tr class="separator:af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512a4a66eb9d4a3a84977e2d10a1de69" id="r_a512a4a66eb9d4a3a84977e2d10a1de69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a512a4a66eb9d4a3a84977e2d10a1de69">good_text</a> (std::string text)</td></tr>
+<tr class="memdesc:a512a4a66eb9d4a3a84977e2d10a1de69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оценивает осмысленность текста по частоте гласных и наличию частых слов  <br /></td></tr>
+<tr class="separator:a512a4a66eb9d4a3a84977e2d10a1de69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7781e22ff13af5faad49154bc68ee8" id="r_aad7781e22ff13af5faad49154bc68ee8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aad7781e22ff13af5faad49154bc68ee8">gamma_length</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:aad7781e22ff13af5faad49154bc68ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет наиболее вероятную длину гаммы  <br /></td></tr>
+<tr class="separator:aad7781e22ff13af5faad49154bc68ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7d8b92d658e300e341b702998000b5" id="r_a8e7d8b92d658e300e341b702998000b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a8e7d8b92d658e300e341b702998000b5">find_gamma_symbol</a> (std::string one_position_letters)</td></tr>
+<tr class="memdesc:a8e7d8b92d658e300e341b702998000b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Угадывает один символ гаммы, опираясь на то, что E это самая частая буква  <br /></td></tr>
+<tr class="separator:a8e7d8b92d658e300e341b702998000b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5911c4a350b8e044436d6531d7508634" id="r_a5911c4a350b8e044436d6531d7508634"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a5911c4a350b8e044436d6531d7508634">known_plaintext_attack</a> (std::string ciphertext, std::string known_plaintext)</td></tr>
+<tr class="memdesc:a5911c4a350b8e044436d6531d7508634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атака на гаммирование с известным открытым текстом и соответствующим шифртекстом  <br /></td></tr>
+<tr class="separator:a5911c4a350b8e044436d6531d7508634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2264d1ba79542f3edd1442a9bc464a6" id="r_aa2264d1ba79542f3edd1442a9bc464a6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aa2264d1ba79542f3edd1442a9bc464a6">cryptanalyze_gamma</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:aa2264d1ba79542f3edd1442a9bc464a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет длину гаммы и расшифровывает  <br /></td></tr>
+<tr class="separator:aa2264d1ba79542f3edd1442a9bc464a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13af83f07b8e0018fe7d7115ef2c176b" id="r_a13af83f07b8e0018fe7d7115ef2c176b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a13af83f07b8e0018fe7d7115ef2c176b">inverse_by_mod</a> (int number, int mod)</td></tr>
+<tr class="memdesc:a13af83f07b8e0018fe7d7115ef2c176b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет обратный элемент числа по заданному модулю  <br /></td></tr>
+<tr class="separator:a13af83f07b8e0018fe7d7115ef2c176b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e075b4453a73c6548e527b6b924c3b7" id="r_a4e075b4453a73c6548e527b6b924c3b7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a4e075b4453a73c6548e527b6b924c3b7">affine_encryption</a> (std::string plaintext, int alpha_key, int beta_key)</td></tr>
+<tr class="memdesc:a4e075b4453a73c6548e527b6b924c3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст аффинным шифром  <br /></td></tr>
+<tr class="separator:a4e075b4453a73c6548e527b6b924c3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8791a2a96023c3533137d3cafd59bc01" id="r_a8791a2a96023c3533137d3cafd59bc01"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a8791a2a96023c3533137d3cafd59bc01">affine_decryption</a> (std::string ciphertext, int alpha_key, int beta_key)</td></tr>
+<tr class="memdesc:a8791a2a96023c3533137d3cafd59bc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный аффинным шифром  <br /></td></tr>
+<tr class="separator:a8791a2a96023c3533137d3cafd59bc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f0ddefc1fb92be098f2dd69e9bfd95" id="r_ad4f0ddefc1fb92be098f2dd69e9bfd95"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ad4f0ddefc1fb92be098f2dd69e9bfd95">affine_reccurent_encryption</a> (std::string plaintext, int alpha_key_0, int beta_key_0, int alpha_key_1, int beta_key_1)</td></tr>
+<tr class="memdesc:ad4f0ddefc1fb92be098f2dd69e9bfd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст аффинным рекуррентным шифром  <br /></td></tr>
+<tr class="separator:ad4f0ddefc1fb92be098f2dd69e9bfd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad015d45f6c8088cd12e961a90b18eb8e" id="r_ad015d45f6c8088cd12e961a90b18eb8e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ad015d45f6c8088cd12e961a90b18eb8e">affine_reccurent_decryption</a> (std::string ciphertext, int alpha_key_0, int beta_key_0, int alpha_key_1, int beta_key_1)</td></tr>
+<tr class="memdesc:ad015d45f6c8088cd12e961a90b18eb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный аффинным рекуррентным шифром  <br /></td></tr>
+<tr class="separator:ad015d45f6c8088cd12e961a90b18eb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7be871b472a73e83843d1ee04269c1" id="r_aea7be871b472a73e83843d1ee04269c1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aea7be871b472a73e83843d1ee04269c1">brute_force_affine</a> (std::string text)</td></tr>
+<tr class="memdesc:aea7be871b472a73e83843d1ee04269c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перебирает все допустимые ключи и возвращает наиболее осмысленную расшифровку (афинный шифр)  <br /></td></tr>
+<tr class="separator:aea7be871b472a73e83843d1ee04269c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84caad56eaf2be1c9529ed05490eb2a" id="r_aa84caad56eaf2be1c9529ed05490eb2a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aa84caad56eaf2be1c9529ed05490eb2a">brute_force_affine_reccurent</a> (std::string text)</td></tr>
+<tr class="memdesc:aa84caad56eaf2be1c9529ed05490eb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перебирает ключи аффинного рекуррентного шифра и возвращает наиболее осмысленную расшифровку  <br /></td></tr>
+<tr class="separator:aa84caad56eaf2be1c9529ed05490eb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541722fe29f443ecffbf126c38a590a3" id="r_a541722fe29f443ecffbf126c38a590a3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a541722fe29f443ecffbf126c38a590a3">input_text</a> (std::string users_str)</td></tr>
+<tr class="memdesc:a541722fe29f443ecffbf126c38a590a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считывает строку, введённую пользователем  <br /></td></tr>
+<tr class="separator:a541722fe29f443ecffbf126c38a590a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f72cb9281488dc62bc8b9d19250582d" id="r_a6f72cb9281488dc62bc8b9d19250582d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a6f72cb9281488dc62bc8b9d19250582d">input_int</a> (std::string users_numb)</td></tr>
+<tr class="memdesc:a6f72cb9281488dc62bc8b9d19250582d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считывает целое число, введённое пользователем  <br /></td></tr>
+<tr class="separator:a6f72cb9281488dc62bc8b9d19250582d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1d9af9a7b2bf2ee61b67842286d880" id="r_a8c1d9af9a7b2bf2ee61b67842286d880"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a8c1d9af9a7b2bf2ee61b67842286d880">vigenere_encryption</a> (std::string plaintext, std::string key, int mode)</td></tr>
+<tr class="memdesc:a8c1d9af9a7b2bf2ee61b67842286d880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст шифром Виженера в заданном режиме.  <br /></td></tr>
+<tr class="separator:a8c1d9af9a7b2bf2ee61b67842286d880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ce656f32956fd7578aa3814b90a851" id="r_ae9ce656f32956fd7578aa3814b90a851"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ae9ce656f32956fd7578aa3814b90a851">vigenere_decryption</a> (std::string ciphertext, std::string key, int mode)</td></tr>
+<tr class="memdesc:ae9ce656f32956fd7578aa3814b90a851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный шифром Виженера.  <br /></td></tr>
+<tr class="separator:ae9ce656f32956fd7578aa3814b90a851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a637b8d6c87011f23302ee134980d6" id="r_a22a637b8d6c87011f23302ee134980d6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a22a637b8d6c87011f23302ee134980d6">vigenere_cryptanalyze</a> (std::string ciphertext, int mode)</td></tr>
+<tr class="memdesc:a22a637b8d6c87011f23302ee134980d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптоанализ шифра Виженера (подбор ключа без его знания).  <br /></td></tr>
+<tr class="separator:a22a637b8d6c87011f23302ee134980d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee62adc8f2a29935de045adf5280a1c" id="r_a3ee62adc8f2a29935de045adf5280a1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a3ee62adc8f2a29935de045adf5280a1c">vernam_encryption</a> (std::string plaintext, std::string key)</td></tr>
+<tr class="memdesc:a3ee62adc8f2a29935de045adf5280a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст шифром Вернама (модульное сложение).  <br /></td></tr>
+<tr class="separator:a3ee62adc8f2a29935de045adf5280a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6830575ccdf2d4c42b3836369fd704" id="r_aed6830575ccdf2d4c42b3836369fd704"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aed6830575ccdf2d4c42b3836369fd704">vernam_decryption</a> (std::string ciphertext, std::string key)</td></tr>
+<tr class="memdesc:aed6830575ccdf2d4c42b3836369fd704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный шифром Вернама.  <br /></td></tr>
+<tr class="separator:aed6830575ccdf2d4c42b3836369fd704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af858b2fb7a411c2ce0cc598dc88db14f" id="r_af858b2fb7a411c2ce0cc598dc88db14f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#af858b2fb7a411c2ce0cc598dc88db14f">permutation_encryption</a> (std::string plaintext, std::string key)</td></tr>
+<tr class="memdesc:af858b2fb7a411c2ce0cc598dc88db14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст блочным перестановочным шифром.  <br /></td></tr>
+<tr class="separator:af858b2fb7a411c2ce0cc598dc88db14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ac2b312392a74016c63682f6a64abd" id="r_a55ac2b312392a74016c63682f6a64abd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a55ac2b312392a74016c63682f6a64abd">permutation_decryption</a> (std::string ciphertext, std::string key)</td></tr>
+<tr class="memdesc:a55ac2b312392a74016c63682f6a64abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный блочным перестановочным шифром.  <br /></td></tr>
+<tr class="separator:a55ac2b312392a74016c63682f6a64abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12747b7fef028a11b7051e290a00b969" id="r_a12747b7fef028a11b7051e290a00b969"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a12747b7fef028a11b7051e290a00b969">permutation_cryptanalyze</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:a12747b7fef028a11b7051e290a00b969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптоанализ блочного перестановочного шифра перебором длин блоков.  <br /></td></tr>
+<tr class="separator:a12747b7fef028a11b7051e290a00b969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939e5d8c220c12fa8d101db90b29fa66" id="r_a939e5d8c220c12fa8d101db90b29fa66"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a939e5d8c220c12fa8d101db90b29fa66">simple_substitution_encrypt</a> (std::string plaintext, std::string key)</td></tr>
+<tr class="memdesc:a939e5d8c220c12fa8d101db90b29fa66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст шифром простой замены (моноалфавитная подстановка)  <br /></td></tr>
+<tr class="separator:a939e5d8c220c12fa8d101db90b29fa66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1ec6738b8250aa6dfd795cc01bc440" id="r_a3c1ec6738b8250aa6dfd795cc01bc440"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a3c1ec6738b8250aa6dfd795cc01bc440">simple_substitution_decrypt</a> (std::string ciphertext, std::string key)</td></tr>
+<tr class="memdesc:a3c1ec6738b8250aa6dfd795cc01bc440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный шифром простой замены  <br /></td></tr>
+<tr class="separator:a3c1ec6738b8250aa6dfd795cc01bc440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac410852c2f7fd2934927a971197dd0b0" id="r_ac410852c2f7fd2934927a971197dd0b0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ac410852c2f7fd2934927a971197dd0b0">simple_substitution_break</a> (std::string ciphertext, int restarts=60)</td></tr>
+<tr class="memdesc:ac410852c2f7fd2934927a971197dd0b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптоанализ шифра простой замены (дешифрование без ключа)  <br /></td></tr>
+<tr class="separator:ac410852c2f7fd2934927a971197dd0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81954c8f02651c58589107de3f574efb" id="r_a81954c8f02651c58589107de3f574efb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a81954c8f02651c58589107de3f574efb">hill_encrypt</a> (std::string plaintext, std::vector&lt; int &gt; key_values, int n)</td></tr>
+<tr class="memdesc:a81954c8f02651c58589107de3f574efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст шифром Хилла (блочный линейный шифр)  <br /></td></tr>
+<tr class="separator:a81954c8f02651c58589107de3f574efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2112585ed6bb4ebfb18ea46d5af0a3e5" id="r_a2112585ed6bb4ebfb18ea46d5af0a3e5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a2112585ed6bb4ebfb18ea46d5af0a3e5">hill_decrypt</a> (std::string ciphertext, std::vector&lt; int &gt; key_values, int n)</td></tr>
+<tr class="memdesc:a2112585ed6bb4ebfb18ea46d5af0a3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный шифром Хилла  <br /></td></tr>
+<tr class="separator:a2112585ed6bb4ebfb18ea46d5af0a3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099d21181b1617508662ddb85cedca88" id="r_a099d21181b1617508662ddb85cedca88"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a099d21181b1617508662ddb85cedca88">hill_break</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:a099d21181b1617508662ddb85cedca88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптоанализ шифра Хилла полным перебором 2×2 матриц  <br /></td></tr>
+<tr class="separator:a099d21181b1617508662ddb85cedca88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d64f3d0f432378d67e121774bb6eb4" id="r_ad8d64f3d0f432378d67e121774bb6eb4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ad8d64f3d0f432378d67e121774bb6eb4">recurrent_hill_encrypt</a> (std::string plaintext, std::vector&lt; std::vector&lt; int &gt; &gt; keys_values, int n)</td></tr>
+<tr class="memdesc:ad8d64f3d0f432378d67e121774bb6eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст рекуррентным шифром Хилла  <br /></td></tr>
+<tr class="separator:ad8d64f3d0f432378d67e121774bb6eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7346f6cc5e6b69ceed988f50a6bff531" id="r_a7346f6cc5e6b69ceed988f50a6bff531"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a7346f6cc5e6b69ceed988f50a6bff531">recurrent_hill_decrypt</a> (std::string ciphertext, std::vector&lt; std::vector&lt; int &gt; &gt; keys_values, int n)</td></tr>
+<tr class="memdesc:a7346f6cc5e6b69ceed988f50a6bff531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный рекуррентным шифром Хилла  <br /></td></tr>
+<tr class="separator:a7346f6cc5e6b69ceed988f50a6bff531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08aa0e3290030548107fb3f171e3a73" id="r_ad08aa0e3290030548107fb3f171e3a73"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#ad08aa0e3290030548107fb3f171e3a73">recurrent_hill_break</a> (std::string ciphertext, int num_keys=1)</td></tr>
+<tr class="memdesc:ad08aa0e3290030548107fb3f171e3a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет криптоанализ рекуррентного шифра Хилла  <br /></td></tr>
+<tr class="separator:ad08aa0e3290030548107fb3f171e3a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aca891dacdd75bb245a87e8d8e791c0e1" id="r_aca891dacdd75bb245a87e8d8e791c0e1"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#aca891dacdd75bb245a87e8d8e791c0e1">ALPHABET</a> = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td></tr>
+<tr class="memdesc:aca891dacdd75bb245a87e8d8e791c0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Английский алфавит  <br /></td></tr>
+<tr class="separator:aca891dacdd75bb245a87e8d8e791c0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747c49ceba7e8132a7b8eff51371346e" id="r_a747c49ceba7e8132a7b8eff51371346e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher_8h.html#a747c49ceba7e8132a7b8eff51371346e">ALPHABET_LENGTH</a> = 26</td></tr>
+<tr class="memdesc:a747c49ceba7e8132a7b8eff51371346e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина английского алфавита  <br /></td></tr>
+<tr class="separator:a747c49ceba7e8132a7b8eff51371346e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a8791a2a96023c3533137d3cafd59bc01" name="a8791a2a96023c3533137d3cafd59bc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8791a2a96023c3533137d3cafd59bc01">&#9670;&#160;</a></span>affine_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный аффинным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">alpha_key</td><td>Ключ a, использованный при шифровании </td></tr>
+    <tr><td class="paramname">beta_key</td><td>Ключ b, использованный при шифровании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Исходный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит или alpha_key не взаимно простое с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e075b4453a73c6548e527b6b924c3b7" name="a4e075b4453a73c6548e527b6b924c3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e075b4453a73c6548e527b6b924c3b7">&#9670;&#160;</a></span>affine_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст аффинным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+    <tr><td class="paramname">alpha_key</td><td>Ключ a (должен быть взаимно прост с 26) </td></tr>
+    <tr><td class="paramname">beta_key</td><td>Ключ b (сдвиг) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит или alpha_key не взаимно простое с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad015d45f6c8088cd12e961a90b18eb8e" name="ad015d45f6c8088cd12e961a90b18eb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad015d45f6c8088cd12e961a90b18eb8e">&#9670;&#160;</a></span>affine_reccurent_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_reccurent_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный аффинным рекуррентным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">alpha_key_0</td><td>Первое начальное значение ключа a </td></tr>
+    <tr><td class="paramname">beta_key_0</td><td>Первое начальное значение ключа b </td></tr>
+    <tr><td class="paramname">alpha_key_1</td><td>Второе начальное значение ключа a </td></tr>
+    <tr><td class="paramname">beta_key_1</td><td>Второе начальное значение ключа b </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Исходный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит, или начальные a не взаимно простые с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4f0ddefc1fb92be098f2dd69e9bfd95" name="ad4f0ddefc1fb92be098f2dd69e9bfd95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f0ddefc1fb92be098f2dd69e9bfd95">&#9670;&#160;</a></span>affine_reccurent_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string affine_reccurent_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_key_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta_key_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст аффинным рекуррентным шифром </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя </td></tr>
+    <tr><td class="paramname">alpha_key_0</td><td>Первое начальное значение ключа a </td></tr>
+    <tr><td class="paramname">beta_key_0</td><td>Первое начальное значение ключа b </td></tr>
+    <tr><td class="paramname">alpha_key_1</td><td>Второе начальное значение ключа a </td></tr>
+    <tr><td class="paramname">beta_key_1</td><td>Второе начальное значение ключа b </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст, содержит другой алфавит или начальные a не взаимно простые с 26 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea7be871b472a73e83843d1ee04269c1" name="aea7be871b472a73e83843d1ee04269c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7be871b472a73e83843d1ee04269c1">&#9670;&#160;</a></span>brute_force_affine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string brute_force_affine </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перебирает все допустимые ключи и возвращает наиболее осмысленную расшифровку (афинный шифр) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Лучший ключ + оценка </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa84caad56eaf2be1c9529ed05490eb2a" name="aa84caad56eaf2be1c9529ed05490eb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84caad56eaf2be1c9529ed05490eb2a">&#9670;&#160;</a></span>brute_force_affine_reccurent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string brute_force_affine_reccurent </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перебирает ключи аффинного рекуррентного шифра и возвращает наиболее осмысленную расшифровку </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Лучший ключ + оценка </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a657770424b6dcf369f510cfb3bc8b1f3" name="a657770424b6dcf369f510cfb3bc8b1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657770424b6dcf369f510cfb3bc8b1f3">&#9670;&#160;</a></span>check_is_english()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_is_english </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, что нет букв, кроме английских </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Произвольный текст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Ошибка, если встретили букву кроме англ. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2264d1ba79542f3edd1442a9bc464a6" name="aa2264d1ba79542f3edd1442a9bc464a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2264d1ba79542f3edd1442a9bc464a6">&#9670;&#160;</a></span>cryptanalyze_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cryptanalyze_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет длину гаммы и расшифровывает </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Предполагаемый открытый текст (длина гаммы и гамма тоже выводятся) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст пустой </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8810e54ee77e34a87b140f0d6b93fa0c" name="a8810e54ee77e34a87b140f0d6b93fa0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8810e54ee77e34a87b140f0d6b93fa0c">&#9670;&#160;</a></span>encryption_with_random_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string encryption_with_random_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает гаммированием со случайной гаммой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Зашифрованный текст; сгенерированная гамма выводится (иначе пользователь расшифровать не сможет) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пустой или содержит другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cff97a6138b28f106fc352cb1093863" name="a1cff97a6138b28f106fc352cb1093863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cff97a6138b28f106fc352cb1093863">&#9670;&#160;</a></span>encryption_with_user_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string encryption_with_user_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст гаммированием с помощью гаммы от пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+    <tr><td class="paramname">gamma</td><td>Гамма (повторяется, если короче текста) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Зашифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст или гамма пусты, или содержат другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e7d8b92d658e300e341b702998000b5" name="a8e7d8b92d658e300e341b702998000b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7d8b92d658e300e341b702998000b5">&#9670;&#160;</a></span>find_gamma_symbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int find_gamma_symbol </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>one_position_letters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Угадывает один символ гаммы, опираясь на то, что E это самая частая буква </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">one_position_letters</td><td>Строка из букв шифртекста, зашифрованных одним символом гаммы </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Индекс предполагаемого символа гаммы </dd></dl>
+
+</div>
+</div>
+<a id="af6d7315b24f3c3248a0f74dcbeea6d9c" name="af6d7315b24f3c3248a0f74dcbeea6d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d7315b24f3c3248a0f74dcbeea6d9c">&#9670;&#160;</a></span>gamma_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string gamma_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный гаммированием </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">gamma</td><td>Гамма, использованная при шифровании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Расшифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст или гамма пусты, или содержат другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad7781e22ff13af5faad49154bc68ee8" name="aad7781e22ff13af5faad49154bc68ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7781e22ff13af5faad49154bc68ee8">&#9670;&#160;</a></span>gamma_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gamma_length </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет наиболее вероятную длину гаммы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Предполагаемая длина гаммы (от 1 до 20) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a512a4a66eb9d4a3a84977e2d10a1de69" name="a512a4a66eb9d4a3a84977e2d10a1de69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512a4a66eb9d4a3a84977e2d10a1de69">&#9670;&#160;</a></span>good_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int good_text </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Оценивает осмысленность текста по частоте гласных и наличию частых слов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Потенциальная расшифровка текста </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество набранных баллов </dd></dl>
+
+</div>
+</div>
+<a id="a099d21181b1617508662ddb85cedca88" name="a099d21181b1617508662ddb85cedca88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099d21181b1617508662ddb85cedca88">&#9670;&#160;</a></span>hill_break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string hill_break </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптоанализ шифра Хилла полным перебором 2×2 матриц </p>
+<p>Перебирает все 157 248 обратимых матриц 2×2 по модулю 26 и выбирает ту, при расшифровании которой текст получил наивысшую триграммную оценку. Найденная матрица выводится в std::cout. Работает только при размере блока 2. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст для атаки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наиболее вероятный открытый текст; хвостовые символы X удалены </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст слишком короткий </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2112585ed6bb4ebfb18ea46d5af0a3e5" name="a2112585ed6bb4ebfb18ea46d5af0a3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2112585ed6bb4ebfb18ea46d5af0a3e5">&#9670;&#160;</a></span>hill_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string hill_decrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>key_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный шифром Хилла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст (число букв должно быть кратно n) </td></tr>
+    <tr><td class="paramname">key_values</td><td>Элементы матрицы ключа в строчно-мажорном порядке (n*n значений) </td></tr>
+    <tr><td class="paramname">n</td><td>Порядок матрицы ключа (он же размер блока) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст; хвостовые символы X (дополнение) удалены </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ некорректен или длина шифртекста не кратна n </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81954c8f02651c58589107de3f574efb" name="a81954c8f02651c58589107de3f574efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81954c8f02651c58589107de3f574efb">&#9670;&#160;</a></span>hill_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string hill_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>key_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст шифром Хилла (блочный линейный шифр) </p>
+<p>Текст делится на блоки длины n; каждый блок умножается на матрицу ключа n×n по модулю 26. Последний неполный блок дополняется буквой X. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст (английские буквы, регистр не важен) </td></tr>
+    <tr><td class="paramname">key_values</td><td>Элементы матрицы ключа в строчно-мажорном порядке (ровно n*n значений) </td></tr>
+    <tr><td class="paramname">n</td><td>Порядок квадратной матрицы ключа (он же размер блока, от 1 до 8) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст в верхнем регистре </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если матрица не является обратимой по модулю 26, размер неверный, или текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6917b793d1ed5d6ac0b94254794b0ce8" name="a6917b793d1ed5d6ac0b94254794b0ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6917b793d1ed5d6ac0b94254794b0ce8">&#9670;&#160;</a></span>index_to_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string index_to_text </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Составляет строку из букв по их индексам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Список индексов </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка букв </dd></dl>
+
+</div>
+</div>
+<a id="a6f72cb9281488dc62bc8b9d19250582d" name="a6f72cb9281488dc62bc8b9d19250582d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f72cb9281488dc62bc8b9d19250582d">&#9670;&#160;</a></span>input_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int input_int </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>users_numb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считывает целое число, введённое пользователем </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users_numb</td><td>Приглашение, которое выводится перед вводом </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Введённое число </dd></dl>
+
+</div>
+</div>
+<a id="a541722fe29f443ecffbf126c38a590a3" name="a541722fe29f443ecffbf126c38a590a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541722fe29f443ecffbf126c38a590a3">&#9670;&#160;</a></span>input_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string input_text </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>users_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считывает строку, введённую пользователем </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">users_str</td><td>Приглашение, которое выводится перед вводом </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Введённая строка </dd></dl>
+
+</div>
+</div>
+<a id="a13af83f07b8e0018fe7d7115ef2c176b" name="a13af83f07b8e0018fe7d7115ef2c176b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13af83f07b8e0018fe7d7115ef2c176b">&#9670;&#160;</a></span>inverse_by_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inverse_by_mod </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ищет обратный элемент числа по заданному модулю </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Число, для которого ищется обратное </td></tr>
+    <tr><td class="paramname">mod</td><td>Модуль </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Обратный элемент (i * number) % mod == 1 </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если number не взаимно просто с mod </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5911c4a350b8e044436d6531d7508634" name="a5911c4a350b8e044436d6531d7508634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5911c4a350b8e044436d6531d7508634">&#9670;&#160;</a></span>known_plaintext_attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string known_plaintext_attack </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>known_plaintext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Атака на гаммирование с известным открытым текстом и соответствующим шифртекстом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">known_plaintext</td><td>Соответствующий шифртексту кусок открытого текста </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Расшифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если один из текстов пуст, содержит другой алфавит, или known_plaintext не одной длины с ciphertext </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12747b7fef028a11b7051e290a00b969" name="a12747b7fef028a11b7051e290a00b969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12747b7fef028a11b7051e290a00b969">&#9670;&#160;</a></span>permutation_cryptanalyze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string permutation_cryptanalyze </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптоанализ блочного перестановочного шифра перебором длин блоков. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наиболее вероятный открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55ac2b312392a74016c63682f6a64abd" name="a55ac2b312392a74016c63682f6a64abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ac2b312392a74016c63682f6a64abd">&#9670;&#160;</a></span>permutation_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string permutation_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный блочным перестановочным шифром. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключевое слово, задающее порядок перестановки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если длина текста не кратна длине ключа. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af858b2fb7a411c2ce0cc598dc88db14f" name="af858b2fb7a411c2ce0cc598dc88db14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af858b2fb7a411c2ce0cc598dc88db14f">&#9670;&#160;</a></span>permutation_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string permutation_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст блочным перестановочным шифром. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключевое слово, задающее порядок перестановки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ пуст. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a67e0c66673506064ecc3e3d202da3512" name="a67e0c66673506064ecc3e3d202da3512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e0c66673506064ecc3e3d202da3512">&#9670;&#160;</a></span>random_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string random_gamma </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Генерирует случайную гамму заданной длины </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">length</td><td>Нужная пользователю длина гаммы </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Рандомно сгенерированная гамма </dd></dl>
+
+</div>
+</div>
+<a id="ad08aa0e3290030548107fb3f171e3a73" name="ad08aa0e3290030548107fb3f171e3a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08aa0e3290030548107fb3f171e3a73">&#9670;&#160;</a></span>recurrent_hill_break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string recurrent_hill_break </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_keys</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптоанализ рекуррентного шифра Хилла </p>
+<p>Независимо перебирает все обратимые 2×2 матрицы для каждой из num_keys позиций цикла, используя потоки блоков, зашифрованных одной матрицей. Найденные матрицы выводятся в std::cout. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">num_keys</td><td>Предполагаемое количество матриц (период цикла, &gt;= 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наиболее вероятный открытый текст; хвостовые символы X удалены </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст слишком короткий </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7346f6cc5e6b69ceed988f50a6bff531" name="a7346f6cc5e6b69ceed988f50a6bff531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7346f6cc5e6b69ceed988f50a6bff531">&#9670;&#160;</a></span>recurrent_hill_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string recurrent_hill_decrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td>
+          <td class="paramname"><em>keys_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный рекуррентным шифром Хилла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст (число букв должно быть кратно n) </td></tr>
+    <tr><td class="paramname">keys_values</td><td>Набор матриц K_1, …, K_m (тот же, что при шифровании) </td></tr>
+    <tr><td class="paramname">n</td><td>Порядок матриц </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст; хвостовые символы X (дополнение) удалены </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ некорректен или длина шифртекста не кратна n </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8d64f3d0f432378d67e121774bb6eb4" name="ad8d64f3d0f432378d67e121774bb6eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d64f3d0f432378d67e121774bb6eb4">&#9670;&#160;</a></span>recurrent_hill_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string recurrent_hill_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td>
+          <td class="paramname"><em>keys_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст рекуррентным шифром Хилла </p>
+<p>Пользователь задаёт m матриц K_1, …, K_m. Блок i шифруется матрицей K_{((i-1) mod m)+1}, т.е. матрицы циклически чередуются. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст </td></tr>
+    <tr><td class="paramname">keys_values</td><td>Набор матриц: keys_values[j] содержит n*n элементов матрицы K_{j+1} (строчно-мажорный порядок) </td></tr>
+    <tr><td class="paramname">n</td><td>Порядок каждой из матриц (он же размер блока, одинаковый для всех) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст в верхнем регистре </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если набор матриц пуст или матрицы некорректны </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac410852c2f7fd2934927a971197dd0b0" name="ac410852c2f7fd2934927a971197dd0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac410852c2f7fd2934927a971197dd0b0">&#9670;&#160;</a></span>simple_substitution_break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string simple_substitution_break </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>restarts</em> = <code>60</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптоанализ шифра простой замены (дешифрование без ключа) </p>
+<p>Использует восхождение к вершине (hill-climbing) по оценке триграмм. Найденный шифралфавит и оценка выводятся в std::cout. Точность растёт с длиной шифртекста (рекомендуется не менее 100 букв). </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст для атаки </td></tr>
+    <tr><td class="paramname">restarts</td><td>Число случайных перезапусков алгоритма (по умолчанию 60) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наиболее вероятный открытый текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст слишком короткий для анализа </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c1ec6738b8250aa6dfd795cc01bc440" name="a3c1ec6738b8250aa6dfd795cc01bc440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1ec6738b8250aa6dfd795cc01bc440">&#9670;&#160;</a></span>simple_substitution_decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string simple_substitution_decrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный шифром простой замены </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст (только английские буквы, регистр не важен) </td></tr>
+    <tr><td class="paramname">key</td><td>Шифралфавит, использованный при шифровании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст в верхнем регистре (только буквы) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ не является перестановкой 26 букв или текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a939e5d8c220c12fa8d101db90b29fa66" name="a939e5d8c220c12fa8d101db90b29fa66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939e5d8c220c12fa8d101db90b29fa66">&#9670;&#160;</a></span>simple_substitution_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string simple_substitution_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст шифром простой замены (моноалфавитная подстановка) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст (только английские буквы, регистр не важен) </td></tr>
+    <tr><td class="paramname">key</td><td>Шифралфавит — перестановка из 26 букв (ключ шифрования) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст в верхнем регистре (только буквы) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ не является перестановкой 26 букв или текст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8555adb0359d3c6c2307a8995a007842" name="a8555adb0359d3c6c2307a8995a007842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8555adb0359d3c6c2307a8995a007842">&#9670;&#160;</a></span>text_to_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; text_to_index </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Составляет список индексов букв текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Строка букв/текст пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Список индексов </dd></dl>
+
+</div>
+</div>
+<a id="ad1ba577e4f6410a91fe9bac630d6401f" name="ad1ba577e4f6410a91fe9bac630d6401f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ba577e4f6410a91fe9bac630d6401f">&#9670;&#160;</a></span>to_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_lower </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Приводит текст к нижнему регистру </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Произвольный текст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка только из строчных букв </dd></dl>
+
+</div>
+</div>
+<a id="a898a296e2cbf8d9eb7774299800474fa" name="a898a296e2cbf8d9eb7774299800474fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a898a296e2cbf8d9eb7774299800474fa">&#9670;&#160;</a></span>to_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_upper </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Приводит текст к верхнему регистру </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Произвольный текст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка только из заглавных букв </dd></dl>
+
+</div>
+</div>
+<a id="aed6830575ccdf2d4c42b3836369fd704" name="aed6830575ccdf2d4c42b3836369fd704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6830575ccdf2d4c42b3836369fd704">&#9670;&#160;</a></span>vernam_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vernam_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный шифром Вернама. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключ, использованный при шифровании. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если длина ключа не равна длине текста. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ee62adc8f2a29935de045adf5280a1c" name="a3ee62adc8f2a29935de045adf5280a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee62adc8f2a29935de045adf5280a1c">&#9670;&#160;</a></span>vernam_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vernam_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст шифром Вернама (модульное сложение). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключ, равный по длине открытому тексту. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если длина ключа не равна длине текста. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a22a637b8d6c87011f23302ee134980d6" name="a22a637b8d6c87011f23302ee134980d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a637b8d6c87011f23302ee134980d6">&#9670;&#160;</a></span>vigenere_cryptanalyze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_cryptanalyze </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет криптоанализ шифра Виженера (подбор ключа без его знания). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст. </td></tr>
+    <tr><td class="paramname">mode</td><td>Режим, в котором производилось шифрование (1, 2 или 3). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Наиболее вероятный открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пуст. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9ce656f32956fd7578aa3814b90a851" name="ae9ce656f32956fd7578aa3814b90a851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ce656f32956fd7578aa3814b90a851">&#9670;&#160;</a></span>vigenere_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный шифром Виженера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключевое слово. </td></tr>
+    <tr><td class="paramname">mode</td><td>Режим (1, 2 или 3). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Открытый текст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ пуст или текст содержит недопустимые символы. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8c1d9af9a7b2bf2ee61b67842286d880" name="a8c1d9af9a7b2bf2ee61b67842286d880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1d9af9a7b2bf2ee61b67842286d880">&#9670;&#160;</a></span>vigenere_encryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_encryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст шифром Виженера в заданном режиме. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Открытый текст. </td></tr>
+    <tr><td class="paramname">key</td><td>Ключевое слово. </td></tr>
+    <tr><td class="paramname">mode</td><td>Режим (1 - повторение лозунга, 2 - самоключ по открытому тексту, 3 - самоключ по шифртексту). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Шифртекст. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если ключ пуст или текст содержит недопустимые символы. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="aca891dacdd75bb245a87e8d8e791c0e1" name="aca891dacdd75bb245a87e8d8e791c0e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca891dacdd75bb245a87e8d8e791c0e1">&#9670;&#160;</a></span>ALPHABET</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ALPHABET = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Английский алфавит </p>
+
+</div>
+</div>
+<a id="a747c49ceba7e8132a7b8eff51371346e" name="a747c49ceba7e8132a7b8eff51371346e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747c49ceba7e8132a7b8eff51371346e">&#9670;&#160;</a></span>ALPHABET_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ALPHABET_LENGTH = 26</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длина английского алфавита </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cipher_8h.html">cipher.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

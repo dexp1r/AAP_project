@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Файл cipher_gamma.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cipher__gamma_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл cipher_gamma.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="cipher_8h_source.html">cipher.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8810e54ee77e34a87b140f0d6b93fa0c" id="r_a8810e54ee77e34a87b140f0d6b93fa0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#a8810e54ee77e34a87b140f0d6b93fa0c">encryption_with_random_gamma</a> (std::string plaintext)</td></tr>
+<tr class="memdesc:a8810e54ee77e34a87b140f0d6b93fa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает гаммированием со случайной гаммой  <br /></td></tr>
+<tr class="separator:a8810e54ee77e34a87b140f0d6b93fa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cff97a6138b28f106fc352cb1093863" id="r_a1cff97a6138b28f106fc352cb1093863"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#a1cff97a6138b28f106fc352cb1093863">encryption_with_user_gamma</a> (std::string plaintext, std::string gamma)</td></tr>
+<tr class="memdesc:a1cff97a6138b28f106fc352cb1093863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зашифровывает текст гаммированием с помощью гаммы от пользователя  <br /></td></tr>
+<tr class="separator:a1cff97a6138b28f106fc352cb1093863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d7315b24f3c3248a0f74dcbeea6d9c" id="r_af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#af6d7315b24f3c3248a0f74dcbeea6d9c">gamma_decryption</a> (std::string ciphertext, std::string gamma)</td></tr>
+<tr class="memdesc:af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расшифровывает текст, зашифрованный гаммированием  <br /></td></tr>
+<tr class="separator:af6d7315b24f3c3248a0f74dcbeea6d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7781e22ff13af5faad49154bc68ee8" id="r_aad7781e22ff13af5faad49154bc68ee8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#aad7781e22ff13af5faad49154bc68ee8">gamma_length</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:aad7781e22ff13af5faad49154bc68ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет наиболее вероятную длину гаммы  <br /></td></tr>
+<tr class="separator:aad7781e22ff13af5faad49154bc68ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7d8b92d658e300e341b702998000b5" id="r_a8e7d8b92d658e300e341b702998000b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#a8e7d8b92d658e300e341b702998000b5">find_gamma_symbol</a> (std::string one_position_letters)</td></tr>
+<tr class="memdesc:a8e7d8b92d658e300e341b702998000b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Угадывает один символ гаммы, опираясь на то, что E это самая частая буква  <br /></td></tr>
+<tr class="separator:a8e7d8b92d658e300e341b702998000b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5911c4a350b8e044436d6531d7508634" id="r_a5911c4a350b8e044436d6531d7508634"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#a5911c4a350b8e044436d6531d7508634">known_plaintext_attack</a> (std::string ciphertext, std::string known_plaintext)</td></tr>
+<tr class="memdesc:a5911c4a350b8e044436d6531d7508634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атака на гаммирование с известным открытым текстом и соответствующим шифртекстом  <br /></td></tr>
+<tr class="separator:a5911c4a350b8e044436d6531d7508634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2264d1ba79542f3edd1442a9bc464a6" id="r_aa2264d1ba79542f3edd1442a9bc464a6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cipher__gamma_8cpp.html#aa2264d1ba79542f3edd1442a9bc464a6">cryptanalyze_gamma</a> (std::string ciphertext)</td></tr>
+<tr class="memdesc:aa2264d1ba79542f3edd1442a9bc464a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет длину гаммы и расшифровывает  <br /></td></tr>
+<tr class="separator:aa2264d1ba79542f3edd1442a9bc464a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="aa2264d1ba79542f3edd1442a9bc464a6" name="aa2264d1ba79542f3edd1442a9bc464a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2264d1ba79542f3edd1442a9bc464a6">&#9670;&#160;</a></span>cryptanalyze_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string cryptanalyze_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет длину гаммы и расшифровывает </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Предполагаемый открытый текст (длина гаммы и гамма тоже выводятся) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст пустой </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8810e54ee77e34a87b140f0d6b93fa0c" name="a8810e54ee77e34a87b140f0d6b93fa0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8810e54ee77e34a87b140f0d6b93fa0c">&#9670;&#160;</a></span>encryption_with_random_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string encryption_with_random_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает гаммированием со случайной гаммой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Зашифрованный текст; сгенерированная гамма выводится (иначе пользователь расшифровать не сможет) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст пустой или содержит другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cff97a6138b28f106fc352cb1093863" name="a1cff97a6138b28f106fc352cb1093863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cff97a6138b28f106fc352cb1093863">&#9670;&#160;</a></span>encryption_with_user_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string encryption_with_user_gamma </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>plaintext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зашифровывает текст гаммированием с помощью гаммы от пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plaintext</td><td>Текст пользователя (только англ буквы) </td></tr>
+    <tr><td class="paramname">gamma</td><td>Гамма (повторяется, если короче текста) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Зашифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если текст или гамма пусты, или содержат другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e7d8b92d658e300e341b702998000b5" name="a8e7d8b92d658e300e341b702998000b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7d8b92d658e300e341b702998000b5">&#9670;&#160;</a></span>find_gamma_symbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int find_gamma_symbol </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>one_position_letters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Угадывает один символ гаммы, опираясь на то, что E это самая частая буква </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">one_position_letters</td><td>Строка из букв шифртекста, зашифрованных одним символом гаммы </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Индекс предполагаемого символа гаммы </dd></dl>
+
+</div>
+</div>
+<a id="af6d7315b24f3c3248a0f74dcbeea6d9c" name="af6d7315b24f3c3248a0f74dcbeea6d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d7315b24f3c3248a0f74dcbeea6d9c">&#9670;&#160;</a></span>gamma_decryption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string gamma_decryption </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>gamma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расшифровывает текст, зашифрованный гаммированием </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">gamma</td><td>Гамма, использованная при шифровании </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Расшифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст или гамма пусты, или содержат другой алфавит </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad7781e22ff13af5faad49154bc68ee8" name="aad7781e22ff13af5faad49154bc68ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7781e22ff13af5faad49154bc68ee8">&#9670;&#160;</a></span>gamma_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gamma_length </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Определяет наиболее вероятную длину гаммы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Предполагаемая длина гаммы (от 1 до 20) </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если шифртекст пуст </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5911c4a350b8e044436d6531d7508634" name="a5911c4a350b8e044436d6531d7508634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5911c4a350b8e044436d6531d7508634">&#9670;&#160;</a></span>known_plaintext_attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string known_plaintext_attack </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ciphertext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>known_plaintext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Атака на гаммирование с известным открытым текстом и соответствующим шифртекстом </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ciphertext</td><td>Шифртекст </td></tr>
+    <tr><td class="paramname">known_plaintext</td><td>Соответствующий шифртексту кусок открытого текста </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Расшифрованный текст </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если один из текстов пуст, содержит другой алфавит, или known_plaintext не одной длины с ciphertext </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cipher__gamma_8cpp.html">cipher_gamma.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

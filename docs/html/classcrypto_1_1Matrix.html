@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Класс crypto::Matrix</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classcrypto_1_1Matrix.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classcrypto_1_1Matrix-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс crypto::Matrix</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="crypto__utils_8hpp_source.html">crypto_utils.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa7535191be5ff97fe7acdb368bbc84a4" id="r_aa7535191be5ff97fe7acdb368bbc84a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#aa7535191be5ff97fe7acdb368bbc84a4">Matrix</a> (int <a class="el" href="classcrypto_1_1Matrix.html#a9aed62d75775d27928a6af36cd51a7f6">rows</a>, int <a class="el" href="classcrypto_1_1Matrix.html#a706738dda46a1f3b95d780ffcb39287c">cols</a>, int <a class="el" href="classcrypto_1_1Matrix.html#ac33022ec4bf49a379140a6463b529e72">modulus</a>=<a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a>)</td></tr>
+<tr class="separator:aa7535191be5ff97fe7acdb368bbc84a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aed62d75775d27928a6af36cd51a7f6" id="r_a9aed62d75775d27928a6af36cd51a7f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a9aed62d75775d27928a6af36cd51a7f6">rows</a> () const</td></tr>
+<tr class="separator:a9aed62d75775d27928a6af36cd51a7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706738dda46a1f3b95d780ffcb39287c" id="r_a706738dda46a1f3b95d780ffcb39287c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a706738dda46a1f3b95d780ffcb39287c">cols</a> () const</td></tr>
+<tr class="separator:a706738dda46a1f3b95d780ffcb39287c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33022ec4bf49a379140a6463b529e72" id="r_ac33022ec4bf49a379140a6463b529e72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#ac33022ec4bf49a379140a6463b529e72">modulus</a> () const</td></tr>
+<tr class="separator:ac33022ec4bf49a379140a6463b529e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70387b179933d3210621bc3c7c2ccb6d" id="r_a70387b179933d3210621bc3c7c2ccb6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a70387b179933d3210621bc3c7c2ccb6d">at</a> (int row, int col) const</td></tr>
+<tr class="separator:a70387b179933d3210621bc3c7c2ccb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf105426e94f10d3bc0746d5954c9e57" id="r_aaf105426e94f10d3bc0746d5954c9e57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#aaf105426e94f10d3bc0746d5954c9e57">set</a> (int row, int col, int value)</td></tr>
+<tr class="separator:aaf105426e94f10d3bc0746d5954c9e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adaa7a8833c6ec754b08c4fa94dbbb1" id="r_a7adaa7a8833c6ec754b08c4fa94dbbb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a7adaa7a8833c6ec754b08c4fa94dbbb1">IsSquare</a> () const</td></tr>
+<tr class="separator:a7adaa7a8833c6ec754b08c4fa94dbbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6c7288eb5d833cf7e58014bfbb63f9" id="r_afd6c7288eb5d833cf7e58014bfbb63f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#afd6c7288eb5d833cf7e58014bfbb63f9">Multiply</a> (const <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> &amp;other) const</td></tr>
+<tr class="separator:afd6c7288eb5d833cf7e58014bfbb63f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5a6490d1bb2d2822dd4121f5e62b61" id="r_adb5a6490d1bb2d2822dd4121f5e62b61"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#adb5a6490d1bb2d2822dd4121f5e62b61">MultiplyVector</a> (const std::vector&lt; int &gt; &amp;vec) const</td></tr>
+<tr class="separator:adb5a6490d1bb2d2822dd4121f5e62b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7172afb40b3df20c52595bb507dfbb32" id="r_a7172afb40b3df20c52595bb507dfbb32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a7172afb40b3df20c52595bb507dfbb32">DeterminantMod</a> () const</td></tr>
+<tr class="separator:a7172afb40b3df20c52595bb507dfbb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4928d307b0e755def50c56c447d499f8" id="r_a4928d307b0e755def50c56c447d499f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a4928d307b0e755def50c56c447d499f8">InverseMod</a> () const</td></tr>
+<tr class="separator:a4928d307b0e755def50c56c447d499f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf90e44b13edbb9d9196ccf70020152b" id="r_acf90e44b13edbb9d9196ccf70020152b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#acf90e44b13edbb9d9196ccf70020152b">Power</a> (int exponent) const</td></tr>
+<tr class="separator:acf90e44b13edbb9d9196ccf70020152b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5923ade3baf7607d15598251a08cf8e9" id="r_a5923ade3baf7607d15598251a08cf8e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a5923ade3baf7607d15598251a08cf8e9">operator==</a> (const <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> &amp;other) const</td></tr>
+<tr class="separator:a5923ade3baf7607d15598251a08cf8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d2046590dbb969b9dd86fcb46375f7" id="r_a65d2046590dbb969b9dd86fcb46375f7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a65d2046590dbb969b9dd86fcb46375f7">ToString</a> () const</td></tr>
+<tr class="separator:a65d2046590dbb969b9dd86fcb46375f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a2b28f7158dd72de8c3db45d0908ee79f" id="r_a2b28f7158dd72de8c3db45d0908ee79f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a2b28f7158dd72de8c3db45d0908ee79f">Identity</a> (int size, int <a class="el" href="classcrypto_1_1Matrix.html#ac33022ec4bf49a379140a6463b529e72">modulus</a>=<a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a>)</td></tr>
+<tr class="separator:a2b28f7158dd72de8c3db45d0908ee79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9245aff47bb8f1709fa6a3c722234b34" id="r_a9245aff47bb8f1709fa6a3c722234b34"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a9245aff47bb8f1709fa6a3c722234b34">FromValues</a> (int <a class="el" href="classcrypto_1_1Matrix.html#a9aed62d75775d27928a6af36cd51a7f6">rows</a>, int <a class="el" href="classcrypto_1_1Matrix.html#a706738dda46a1f3b95d780ffcb39287c">cols</a>, const std::vector&lt; int &gt; &amp;values, int <a class="el" href="classcrypto_1_1Matrix.html#ac33022ec4bf49a379140a6463b529e72">modulus</a>=<a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a>)</td></tr>
+<tr class="separator:a9245aff47bb8f1709fa6a3c722234b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a4e36ceaa8e0667fa2b0a1e60da424c7c" id="r_a4e36ceaa8e0667fa2b0a1e60da424c7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a4e36ceaa8e0667fa2b0a1e60da424c7c">Minor</a> (int skip_row, int skip_col) const</td></tr>
+<tr class="separator:a4e36ceaa8e0667fa2b0a1e60da424c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ab689924de2357ea3206a6d5e1f870b86" id="r_ab689924de2357ea3206a6d5e1f870b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#ab689924de2357ea3206a6d5e1f870b86">rows_</a></td></tr>
+<tr class="memdesc:ab689924de2357ea3206a6d5e1f870b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число строк.  <br /></td></tr>
+<tr class="separator:ab689924de2357ea3206a6d5e1f870b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8797e1573a7f23cfe2dc85dd3e6faa6" id="r_ac8797e1573a7f23cfe2dc85dd3e6faa6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#ac8797e1573a7f23cfe2dc85dd3e6faa6">cols_</a></td></tr>
+<tr class="memdesc:ac8797e1573a7f23cfe2dc85dd3e6faa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число столбцов.  <br /></td></tr>
+<tr class="separator:ac8797e1573a7f23cfe2dc85dd3e6faa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777eb7e04adb10085fd8fcf136278637" id="r_a777eb7e04adb10085fd8fcf136278637"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a777eb7e04adb10085fd8fcf136278637">modulus_</a></td></tr>
+<tr class="memdesc:a777eb7e04adb10085fd8fcf136278637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Модуль для всей арифметики.  <br /></td></tr>
+<tr class="separator:a777eb7e04adb10085fd8fcf136278637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66251efc767c74fb05ac105955271967" id="r_a66251efc767c74fb05ac105955271967"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrypto_1_1Matrix.html#a66251efc767c74fb05ac105955271967">data_</a></td></tr>
+<tr class="memdesc:a66251efc767c74fb05ac105955271967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элементы в строчно-мажорном порядке, размер rows_*cols_.  <br /></td></tr>
+<tr class="separator:a66251efc767c74fb05ac105955271967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa7535191be5ff97fe7acdb368bbc84a4" name="aa7535191be5ff97fe7acdb368bbc84a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7535191be5ff97fe7acdb368bbc84a4">&#9670;&#160;</a></span>Matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">crypto::Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modulus</em> = <code><a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a70387b179933d3210621bc3c7c2ccb6d" name="a70387b179933d3210621bc3c7c2ccb6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70387b179933d3210621bc3c7c2ccb6d">&#9670;&#160;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a706738dda46a1f3b95d780ffcb39287c" name="a706738dda46a1f3b95d780ffcb39287c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706738dda46a1f3b95d780ffcb39287c">&#9670;&#160;</a></span>cols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::cols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7172afb40b3df20c52595bb507dfbb32" name="a7172afb40b3df20c52595bb507dfbb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7172afb40b3df20c52595bb507dfbb32">&#9670;&#160;</a></span>DeterminantMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::DeterminantMod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9245aff47bb8f1709fa6a3c722234b34" name="a9245aff47bb8f1709fa6a3c722234b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9245aff47bb8f1709fa6a3c722234b34">&#9670;&#160;</a></span>FromValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::FromValues </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modulus</em> = <code><a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b28f7158dd72de8c3db45d0908ee79f" name="a2b28f7158dd72de8c3db45d0908ee79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b28f7158dd72de8c3db45d0908ee79f">&#9670;&#160;</a></span>Identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::Identity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modulus</em> = <code><a class="el" href="namespacecrypto.html#ae1cf75d372ea8884bb73c8c89840832a">kModulus</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4928d307b0e755def50c56c447d499f8" name="a4928d307b0e755def50c56c447d499f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4928d307b0e755def50c56c447d499f8">&#9670;&#160;</a></span>InverseMod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::InverseMod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7adaa7a8833c6ec754b08c4fa94dbbb1" name="a7adaa7a8833c6ec754b08c4fa94dbbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7adaa7a8833c6ec754b08c4fa94dbbb1">&#9670;&#160;</a></span>IsSquare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crypto::Matrix::IsSquare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e36ceaa8e0667fa2b0a1e60da424c7c" name="a4e36ceaa8e0667fa2b0a1e60da424c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e36ceaa8e0667fa2b0a1e60da424c7c">&#9670;&#160;</a></span>Minor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::Minor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac33022ec4bf49a379140a6463b529e72" name="ac33022ec4bf49a379140a6463b529e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33022ec4bf49a379140a6463b529e72">&#9670;&#160;</a></span>modulus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::modulus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd6c7288eb5d833cf7e58014bfbb63f9" name="afd6c7288eb5d833cf7e58014bfbb63f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6c7288eb5d833cf7e58014bfbb63f9">&#9670;&#160;</a></span>Multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::Multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb5a6490d1bb2d2822dd4121f5e62b61" name="adb5a6490d1bb2d2822dd4121f5e62b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5a6490d1bb2d2822dd4121f5e62b61">&#9670;&#160;</a></span>MultiplyVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; crypto::Matrix::MultiplyVector </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5923ade3baf7607d15598251a08cf8e9" name="a5923ade3baf7607d15598251a08cf8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5923ade3baf7607d15598251a08cf8e9">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crypto::Matrix::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf90e44b13edbb9d9196ccf70020152b" name="acf90e44b13edbb9d9196ccf70020152b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf90e44b13edbb9d9196ccf70020152b">&#9670;&#160;</a></span>Power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a> crypto::Matrix::Power </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>exponent</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9aed62d75775d27928a6af36cd51a7f6" name="a9aed62d75775d27928a6af36cd51a7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aed62d75775d27928a6af36cd51a7f6">&#9670;&#160;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::rows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf105426e94f10d3bc0746d5954c9e57" name="aaf105426e94f10d3bc0746d5954c9e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf105426e94f10d3bc0746d5954c9e57">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crypto::Matrix::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65d2046590dbb969b9dd86fcb46375f7" name="a65d2046590dbb969b9dd86fcb46375f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d2046590dbb969b9dd86fcb46375f7">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crypto::Matrix::ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ac8797e1573a7f23cfe2dc85dd3e6faa6" name="ac8797e1573a7f23cfe2dc85dd3e6faa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8797e1573a7f23cfe2dc85dd3e6faa6">&#9670;&#160;</a></span>cols_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::cols_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Число столбцов. </p>
+
+</div>
+</div>
+<a id="a66251efc767c74fb05ac105955271967" name="a66251efc767c74fb05ac105955271967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66251efc767c74fb05ac105955271967">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; crypto::Matrix::data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Элементы в строчно-мажорном порядке, размер rows_*cols_. </p>
+
+</div>
+</div>
+<a id="a777eb7e04adb10085fd8fcf136278637" name="a777eb7e04adb10085fd8fcf136278637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777eb7e04adb10085fd8fcf136278637">&#9670;&#160;</a></span>modulus_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::modulus_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Модуль для всей арифметики. </p>
+
+</div>
+</div>
+<a id="ab689924de2357ea3206a6d5e1f870b86" name="ab689924de2357ea3206a6d5e1f870b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab689924de2357ea3206a6d5e1f870b86">&#9670;&#160;</a></span>rows_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crypto::Matrix::rows_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Число строк. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="crypto__utils_8hpp_source.html">crypto_utils.hpp</a></li>
+<li><a class="el" href="crypto__utils_8cpp.html">crypto_utils.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecrypto.html">crypto</a></li><li class="navelem"><a class="el" href="classcrypto_1_1Matrix.html">Matrix</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

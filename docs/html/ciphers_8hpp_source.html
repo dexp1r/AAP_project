@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Исходный файл ciphers.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ciphers_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ciphers.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ciphers_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLASSICAL_CIPHERS_CIPHERS_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CLASSICAL_CIPHERS_CIPHERS_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="crypto__utils_8hpp.html">crypto_utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacecrypto.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecrypto.html">crypto</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structcrypto_1_1AttackResult.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structcrypto_1_1AttackResult.html">AttackResult</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structcrypto_1_1AttackResult.html#a076fac03686b8709774b54b24a6c4883">   13</a></span>  std::string <a class="code hl_variable" href="structcrypto_1_1AttackResult.html#a076fac03686b8709774b54b24a6c4883">key_description</a>;  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structcrypto_1_1AttackResult.html#a763176d55ae75076272ec8acaddadc7c">   14</a></span>  std::string <a class="code hl_variable" href="structcrypto_1_1AttackResult.html#a763176d55ae75076272ec8acaddadc7c">plaintext</a>;  </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structcrypto_1_1AttackResult.html#aca725ec85864197412b092f8b8387bfd">   15</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structcrypto_1_1AttackResult.html#aca725ec85864197412b092f8b8387bfd">score</a> = 0.0;  </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classcrypto_1_1SimpleSubstitutionCipher.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classcrypto_1_1SimpleSubstitutionCipher.html">SimpleSubstitutionCipher</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classcrypto_1_1SimpleSubstitutionCipher.html">SimpleSubstitutionCipher</a>(<span class="keyword">const</span> std::string&amp; cipher_alphabet);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  std::string <a class="code hl_function" href="classcrypto_1_1SimpleSubstitutionCipher.html#ae2ecc3b4b5268c54dd245d96edff8ca4">Encrypt</a>(<span class="keyword">const</span> std::string&amp; plaintext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  std::string <a class="code hl_function" href="classcrypto_1_1SimpleSubstitutionCipher.html#afbb8cbf58002fa1bdd70f1a351ed7ba9">Decrypt</a>(<span class="keyword">const</span> std::string&amp; ciphertext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classcrypto_1_1SimpleSubstitutionCipher.html#a0c6281f7fd237e67989b9162404d992a">   30</a></span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classcrypto_1_1SimpleSubstitutionCipher.html#a0c6281f7fd237e67989b9162404d992a">key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcrypto_1_1SimpleSubstitutionCipher.html#a29494aacb3da77145c69a4fa56e0e976">cipher_alphabet_</a>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structcrypto_1_1AttackResult.html">AttackResult</a> <a class="code hl_function" href="classcrypto_1_1SimpleSubstitutionCipher.html#af76fd2b28a0994cefd9ba7124c161de9">Break</a>(<span class="keyword">const</span> std::string&amp; ciphertext, <span class="keywordtype">int</span> restarts = 60);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classcrypto_1_1SimpleSubstitutionCipher.html#a29494aacb3da77145c69a4fa56e0e976">   36</a></span>  std::string <a class="code hl_variable" href="classcrypto_1_1SimpleSubstitutionCipher.html#a29494aacb3da77145c69a4fa56e0e976">cipher_alphabet_</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classcrypto_1_1SimpleSubstitutionCipher.html#a95b4c6ea61fa67ba3c265cb23a858218">   38</a></span>  std::array&lt;int, kAlphabetSize&gt; <a class="code hl_variable" href="classcrypto_1_1SimpleSubstitutionCipher.html#a95b4c6ea61fa67ba3c265cb23a858218">encrypt_map_</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classcrypto_1_1SimpleSubstitutionCipher.html#a64720e85fba9b1b4bb6bd8366a1b7f43">   40</a></span>  std::array&lt;int, kAlphabetSize&gt; <a class="code hl_variable" href="classcrypto_1_1SimpleSubstitutionCipher.html#a64720e85fba9b1b4bb6bd8366a1b7f43">decrypt_map_</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcrypto_1_1HillCipher.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classcrypto_1_1HillCipher.html">HillCipher</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classcrypto_1_1HillCipher.html">HillCipher</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcrypto_1_1Matrix.html">Matrix</a>&amp; <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a77bad1b8d07083e12f3bc82c98a1c35c">key</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  std::string <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a5ddd9c4c627569ab9ce1d94e27a5eb80">Encrypt</a>(<span class="keyword">const</span> std::string&amp; plaintext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  std::string <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a1de15d0e7a9c524c619eea0fb462beb4">Decrypt</a>(<span class="keyword">const</span> std::string&amp; ciphertext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classcrypto_1_1HillCipher.html#a85a342f58c850fcdea686ed1727a18e5">   55</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a85a342f58c850fcdea686ed1727a18e5">block_size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcrypto_1_1HillCipher.html#ae68014e0fcc814a56c7653bf8c998ec8">key_</a>.<a class="code hl_function" href="classcrypto_1_1Matrix.html#a9aed62d75775d27928a6af36cd51a7f6">rows</a>(); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classcrypto_1_1HillCipher.html#a77bad1b8d07083e12f3bc82c98a1c35c">   58</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classcrypto_1_1Matrix.html">Matrix</a>&amp; <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a77bad1b8d07083e12f3bc82c98a1c35c">key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcrypto_1_1HillCipher.html#ae68014e0fcc814a56c7653bf8c998ec8">key_</a>; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structcrypto_1_1AttackResult.html">AttackResult</a> <a class="code hl_function" href="classcrypto_1_1HillCipher.html#ac62e054f2060247327fff9c7bd0062c7">Break</a>(<span class="keyword">const</span> std::string&amp; ciphertext, <span class="keywordtype">int</span> <a class="code hl_function" href="classcrypto_1_1HillCipher.html#a85a342f58c850fcdea686ed1727a18e5">block_size</a> = 2);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classcrypto_1_1HillCipher.html#ae68014e0fcc814a56c7653bf8c998ec8">   64</a></span>  <a class="code hl_class" href="classcrypto_1_1Matrix.html">Matrix</a> <a class="code hl_variable" href="classcrypto_1_1HillCipher.html#ae68014e0fcc814a56c7653bf8c998ec8">key_</a>;          </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classcrypto_1_1HillCipher.html#aa2b414aa9ebf0a6b1efc51d746314a4e">   65</a></span>  <a class="code hl_class" href="classcrypto_1_1Matrix.html">Matrix</a> <a class="code hl_variable" href="classcrypto_1_1HillCipher.html#aa2b414aa9ebf0a6b1efc51d746314a4e">inverse_key_</a>;  </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html">   68</a></span><span class="keyword">class </span><a class="code hl_class" href="classcrypto_1_1RecurrentHillCipher.html">RecurrentHillCipher</a> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classcrypto_1_1RecurrentHillCipher.html">RecurrentHillCipher</a>(<span class="keyword">const</span> std::vector&lt;Matrix&gt;&amp; <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#aaa2bfe56b50098958fed80da0658533a">keys</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  std::string <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#a5d8048f9e2518b0f74964bc5bce7e3e5">Encrypt</a>(<span class="keyword">const</span> std::string&amp; plaintext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  std::string <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#a89bdfaab9a064458bec8e8a0878ef67c">Decrypt</a>(<span class="keyword">const</span> std::string&amp; ciphertext) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html#a25c334b8673b1f1b9ba41f09aa8b22ee">   80</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#a25c334b8673b1f1b9ba41f09aa8b22ee">block_size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">keys_</a>.front().rows(); }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html#a6493ce5f29789cfad7ef37f99f3d9592">   83</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#a6493ce5f29789cfad7ef37f99f3d9592">key_count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">keys_</a>.size()); }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html#aaa2bfe56b50098958fed80da0658533a">   86</a></span>  <span class="keyword">const</span> std::vector&lt;Matrix&gt;&amp; <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#aaa2bfe56b50098958fed80da0658533a">keys</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">keys_</a>; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structcrypto_1_1AttackResult.html">AttackResult</a> <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#aefc3198597cf2c77f0845b4ce0dbfaf0">Break</a>(<span class="keyword">const</span> std::string&amp; ciphertext, <span class="keywordtype">int</span> <a class="code hl_function" href="classcrypto_1_1RecurrentHillCipher.html#a25c334b8673b1f1b9ba41f09aa8b22ee">block_size</a> = 2,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                            <span class="keywordtype">int</span> num_keys = 1);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">   93</a></span>  std::vector&lt;Matrix&gt; <a class="code hl_variable" href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">keys_</a>;  </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classcrypto_1_1RecurrentHillCipher.html#aaabc13b5175b0497b3a8bfc69574cd85">   94</a></span>  std::vector&lt;Matrix&gt; <a class="code hl_variable" href="classcrypto_1_1RecurrentHillCipher.html#aaabc13b5175b0497b3a8bfc69574cd85">inverse_keys_</a>;  </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}  <span class="comment">// namespace crypto</span></div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif  </span><span class="comment">// CLASSICAL_CIPHERS_CIPHERS_HPP_</span></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html"><div class="ttname"><a href="classcrypto_1_1HillCipher.html">crypto::HillCipher</a></div><div class="ttdef"><b>Definition</b> ciphers.hpp:43</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_a1de15d0e7a9c524c619eea0fb462beb4"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#a1de15d0e7a9c524c619eea0fb462beb4">crypto::HillCipher::Decrypt</a></div><div class="ttdeci">std::string Decrypt(const std::string &amp;ciphertext) const</div><div class="ttdef"><b>Definition</b> hill.cpp:82</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_a5ddd9c4c627569ab9ce1d94e27a5eb80"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#a5ddd9c4c627569ab9ce1d94e27a5eb80">crypto::HillCipher::Encrypt</a></div><div class="ttdeci">std::string Encrypt(const std::string &amp;plaintext) const</div><div class="ttdef"><b>Definition</b> hill.cpp:58</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_a77bad1b8d07083e12f3bc82c98a1c35c"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#a77bad1b8d07083e12f3bc82c98a1c35c">crypto::HillCipher::key</a></div><div class="ttdeci">const Matrix &amp; key() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:58</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_a85a342f58c850fcdea686ed1727a18e5"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#a85a342f58c850fcdea686ed1727a18e5">crypto::HillCipher::block_size</a></div><div class="ttdeci">int block_size() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:55</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_aa2b414aa9ebf0a6b1efc51d746314a4e"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#aa2b414aa9ebf0a6b1efc51d746314a4e">crypto::HillCipher::inverse_key_</a></div><div class="ttdeci">Matrix inverse_key_</div><div class="ttdoc">Кешированная обратная матрица для расшифрования.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:65</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_ac62e054f2060247327fff9c7bd0062c7"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#ac62e054f2060247327fff9c7bd0062c7">crypto::HillCipher::Break</a></div><div class="ttdeci">static AttackResult Break(const std::string &amp;ciphertext, int block_size=2)</div><div class="ttdef"><b>Definition</b> hill.cpp:110</div></div>
+<div class="ttc" id="aclasscrypto_1_1HillCipher_html_ae68014e0fcc814a56c7653bf8c998ec8"><div class="ttname"><a href="classcrypto_1_1HillCipher.html#ae68014e0fcc814a56c7653bf8c998ec8">crypto::HillCipher::key_</a></div><div class="ttdeci">Matrix key_</div><div class="ttdoc">Матрица ключа шифрования.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:64</div></div>
+<div class="ttc" id="aclasscrypto_1_1Matrix_html"><div class="ttname"><a href="classcrypto_1_1Matrix.html">crypto::Matrix</a></div><div class="ttdef"><b>Definition</b> crypto_utils.hpp:78</div></div>
+<div class="ttc" id="aclasscrypto_1_1Matrix_html_a9aed62d75775d27928a6af36cd51a7f6"><div class="ttname"><a href="classcrypto_1_1Matrix.html#a9aed62d75775d27928a6af36cd51a7f6">crypto::Matrix::rows</a></div><div class="ttdeci">int rows() const</div><div class="ttdef"><b>Definition</b> crypto_utils.hpp:91</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html">crypto::RecurrentHillCipher</a></div><div class="ttdef"><b>Definition</b> ciphers.hpp:68</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_a25c334b8673b1f1b9ba41f09aa8b22ee"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#a25c334b8673b1f1b9ba41f09aa8b22ee">crypto::RecurrentHillCipher::block_size</a></div><div class="ttdeci">int block_size() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:80</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_a5d8048f9e2518b0f74964bc5bce7e3e5"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#a5d8048f9e2518b0f74964bc5bce7e3e5">crypto::RecurrentHillCipher::Encrypt</a></div><div class="ttdeci">std::string Encrypt(const std::string &amp;plaintext) const</div><div class="ttdef"><b>Definition</b> recurrent_hill.cpp:71</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_a6493ce5f29789cfad7ef37f99f3d9592"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#a6493ce5f29789cfad7ef37f99f3d9592">crypto::RecurrentHillCipher::key_count</a></div><div class="ttdeci">int key_count() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:83</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_a841068a071e64a8b931286069b5617db"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#a841068a071e64a8b931286069b5617db">crypto::RecurrentHillCipher::keys_</a></div><div class="ttdeci">std::vector&lt; Matrix &gt; keys_</div><div class="ttdoc">Набор ключевых матриц K_1…K_m.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:93</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_a89bdfaab9a064458bec8e8a0878ef67c"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#a89bdfaab9a064458bec8e8a0878ef67c">crypto::RecurrentHillCipher::Decrypt</a></div><div class="ttdeci">std::string Decrypt(const std::string &amp;ciphertext) const</div><div class="ttdef"><b>Definition</b> recurrent_hill.cpp:99</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_aaa2bfe56b50098958fed80da0658533a"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#aaa2bfe56b50098958fed80da0658533a">crypto::RecurrentHillCipher::keys</a></div><div class="ttdeci">const std::vector&lt; Matrix &gt; &amp; keys() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:86</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_aaabc13b5175b0497b3a8bfc69574cd85"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#aaabc13b5175b0497b3a8bfc69574cd85">crypto::RecurrentHillCipher::inverse_keys_</a></div><div class="ttdeci">std::vector&lt; Matrix &gt; inverse_keys_</div><div class="ttdoc">Обратные матрицы для расшифрования.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:94</div></div>
+<div class="ttc" id="aclasscrypto_1_1RecurrentHillCipher_html_aefc3198597cf2c77f0845b4ce0dbfaf0"><div class="ttname"><a href="classcrypto_1_1RecurrentHillCipher.html#aefc3198597cf2c77f0845b4ce0dbfaf0">crypto::RecurrentHillCipher::Break</a></div><div class="ttdeci">static AttackResult Break(const std::string &amp;ciphertext, int block_size=2, int num_keys=1)</div><div class="ttdef"><b>Definition</b> recurrent_hill.cpp:131</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html">crypto::SimpleSubstitutionCipher</a></div><div class="ttdef"><b>Definition</b> ciphers.hpp:18</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_a0c6281f7fd237e67989b9162404d992a"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#a0c6281f7fd237e67989b9162404d992a">crypto::SimpleSubstitutionCipher::key</a></div><div class="ttdeci">const std::string &amp; key() const</div><div class="ttdef"><b>Definition</b> ciphers.hpp:30</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_a29494aacb3da77145c69a4fa56e0e976"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#a29494aacb3da77145c69a4fa56e0e976">crypto::SimpleSubstitutionCipher::cipher_alphabet_</a></div><div class="ttdeci">std::string cipher_alphabet_</div><div class="ttdef"><b>Definition</b> ciphers.hpp:36</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_a64720e85fba9b1b4bb6bd8366a1b7f43"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#a64720e85fba9b1b4bb6bd8366a1b7f43">crypto::SimpleSubstitutionCipher::decrypt_map_</a></div><div class="ttdeci">std::array&lt; int, kAlphabetSize &gt; decrypt_map_</div><div class="ttdoc">Таблица расшифрования: индекс буквы шифртекста → индекс открытого текста.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:40</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_a95b4c6ea61fa67ba3c265cb23a858218"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#a95b4c6ea61fa67ba3c265cb23a858218">crypto::SimpleSubstitutionCipher::encrypt_map_</a></div><div class="ttdeci">std::array&lt; int, kAlphabetSize &gt; encrypt_map_</div><div class="ttdoc">Таблица шифрования: индекс буквы открытого текста → индекс шифртекста.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:38</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_ae2ecc3b4b5268c54dd245d96edff8ca4"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#ae2ecc3b4b5268c54dd245d96edff8ca4">crypto::SimpleSubstitutionCipher::Encrypt</a></div><div class="ttdeci">std::string Encrypt(const std::string &amp;plaintext) const</div><div class="ttdef"><b>Definition</b> simple_substitution.cpp:119</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_af76fd2b28a0994cefd9ba7124c161de9"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#af76fd2b28a0994cefd9ba7124c161de9">crypto::SimpleSubstitutionCipher::Break</a></div><div class="ttdeci">static AttackResult Break(const std::string &amp;ciphertext, int restarts=60)</div><div class="ttdef"><b>Definition</b> simple_substitution.cpp:151</div></div>
+<div class="ttc" id="aclasscrypto_1_1SimpleSubstitutionCipher_html_afbb8cbf58002fa1bdd70f1a351ed7ba9"><div class="ttname"><a href="classcrypto_1_1SimpleSubstitutionCipher.html#afbb8cbf58002fa1bdd70f1a351ed7ba9">crypto::SimpleSubstitutionCipher::Decrypt</a></div><div class="ttdeci">std::string Decrypt(const std::string &amp;ciphertext) const</div><div class="ttdef"><b>Definition</b> simple_substitution.cpp:135</div></div>
+<div class="ttc" id="acrypto__utils_8hpp_html"><div class="ttname"><a href="crypto__utils_8hpp.html">crypto_utils.hpp</a></div></div>
+<div class="ttc" id="anamespacecrypto_html"><div class="ttname"><a href="namespacecrypto.html">crypto</a></div><div class="ttdef"><b>Definition</b> ciphers.hpp:10</div></div>
+<div class="ttc" id="astructcrypto_1_1AttackResult_html"><div class="ttname"><a href="structcrypto_1_1AttackResult.html">crypto::AttackResult</a></div><div class="ttdef"><b>Definition</b> ciphers.hpp:12</div></div>
+<div class="ttc" id="astructcrypto_1_1AttackResult_html_a076fac03686b8709774b54b24a6c4883"><div class="ttname"><a href="structcrypto_1_1AttackResult.html#a076fac03686b8709774b54b24a6c4883">crypto::AttackResult::key_description</a></div><div class="ttdeci">std::string key_description</div><div class="ttdoc">Удобочитаемое описание найденного ключа.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:13</div></div>
+<div class="ttc" id="astructcrypto_1_1AttackResult_html_a763176d55ae75076272ec8acaddadc7c"><div class="ttname"><a href="structcrypto_1_1AttackResult.html#a763176d55ae75076272ec8acaddadc7c">crypto::AttackResult::plaintext</a></div><div class="ttdeci">std::string plaintext</div><div class="ttdoc">Лучший восстановленный открытый текст.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:14</div></div>
+<div class="ttc" id="astructcrypto_1_1AttackResult_html_aca725ec85864197412b092f8b8387bfd"><div class="ttname"><a href="structcrypto_1_1AttackResult.html#aca725ec85864197412b092f8b8387bfd">crypto::AttackResult::score</a></div><div class="ttdeci">double score</div><div class="ttdoc">Оценка качества восстановленного текста.</div><div class="ttdef"><b>Definition</b> ciphers.hpp:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="ciphers_8hpp.html">ciphers.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

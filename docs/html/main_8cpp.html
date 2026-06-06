@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cipher Application: Файл main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Cipher Application<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Набор классических шифров: простая замена, Хилл, рекуррентный Хилл, аффинный, гамма, Виженер, Вернам, перестановка</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="cipher_8h_source.html">cipher.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="crypto__utils_8hpp_source.html">crypto_utils.hpp</a>&quot;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a704fee4a0035e1fa0c98cf450d7757fc" id="r_a704fee4a0035e1fa0c98cf450d7757fc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a704fee4a0035e1fa0c98cf450d7757fc">ReadMenuChoice</a> (int min_val, int max_val)</td></tr>
+<tr class="separator:a704fee4a0035e1fa0c98cf450d7757fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9a0e8943a841543205c2996aff001f" id="r_abd9a0e8943a841543205c2996aff001f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abd9a0e8943a841543205c2996aff001f">ReadLine</a> (const std::string &amp;prompt)</td></tr>
+<tr class="separator:abd9a0e8943a841543205c2996aff001f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fed592ad0886d835acc67ec444521c" id="r_a72fed592ad0886d835acc67ec444521c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a72fed592ad0886d835acc67ec444521c">ReadInt</a> (const std::string &amp;prompt)</td></tr>
+<tr class="separator:a72fed592ad0886d835acc67ec444521c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da5695556841c373e11f7b1845dc0f4" id="r_a8da5695556841c373e11f7b1845dc0f4"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8da5695556841c373e11f7b1845dc0f4">ReadIntList</a> (const std::string &amp;prompt, int count)</td></tr>
+<tr class="separator:a8da5695556841c373e11f7b1845dc0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc56a62a4ed719c76dfff4cc854a147e" id="r_acc56a62a4ed719c76dfff4cc854a147e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acc56a62a4ed719c76dfff4cc854a147e">RestoreStructure</a> (const std::string &amp;original, const std::string &amp;letters_out)</td></tr>
+<tr class="separator:acc56a62a4ed719c76dfff4cc854a147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f7372fe582e9f6f74657683a8c6071" id="r_a86f7372fe582e9f6f74657683a8c6071"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a86f7372fe582e9f6f74657683a8c6071">menu_substitution</a> ()</td></tr>
+<tr class="separator:a86f7372fe582e9f6f74657683a8c6071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712330bf297e45bda6f4e7e191c229e5" id="r_a712330bf297e45bda6f4e7e191c229e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a712330bf297e45bda6f4e7e191c229e5">menu_hill</a> ()</td></tr>
+<tr class="separator:a712330bf297e45bda6f4e7e191c229e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd03cfed14f053971c95a91fd9e0d1a" id="r_a1dd03cfed14f053971c95a91fd9e0d1a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1dd03cfed14f053971c95a91fd9e0d1a">menu_recurrent_hill</a> ()</td></tr>
+<tr class="separator:a1dd03cfed14f053971c95a91fd9e0d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0dd746f4a489589ebb7b6ce345c894" id="r_aee0dd746f4a489589ebb7b6ce345c894"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aee0dd746f4a489589ebb7b6ce345c894">menu_affine</a> ()</td></tr>
+<tr class="separator:aee0dd746f4a489589ebb7b6ce345c894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c995bdad2277e2567f8eea055c149c" id="r_ae5c995bdad2277e2567f8eea055c149c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae5c995bdad2277e2567f8eea055c149c">menu_affine_reccurent</a> ()</td></tr>
+<tr class="separator:ae5c995bdad2277e2567f8eea055c149c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7dd191917d12aeebd9c7b6363a37c9" id="r_aab7dd191917d12aeebd9c7b6363a37c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aab7dd191917d12aeebd9c7b6363a37c9">menu_gamma</a> ()</td></tr>
+<tr class="separator:aab7dd191917d12aeebd9c7b6363a37c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4059822c13b062ef471acc2b2c383e98" id="r_a4059822c13b062ef471acc2b2c383e98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4059822c13b062ef471acc2b2c383e98">menu_vigenere</a> ()</td></tr>
+<tr class="separator:a4059822c13b062ef471acc2b2c383e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7f098ec1e810ac29a07f9f2bb65fcf" id="r_a7b7f098ec1e810ac29a07f9f2bb65fcf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a7b7f098ec1e810ac29a07f9f2bb65fcf">menu_vernam</a> ()</td></tr>
+<tr class="separator:a7b7f098ec1e810ac29a07f9f2bb65fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808faa5aeaf1911a281401f87e1d93c1" id="r_a808faa5aeaf1911a281401f87e1d93c1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a808faa5aeaf1911a281401f87e1d93c1">menu_permutation</a> ()</td></tr>
+<tr class="separator:a808faa5aeaf1911a281401f87e1d93c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee0dd746f4a489589ebb7b6ce345c894" name="aee0dd746f4a489589ebb7b6ce345c894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0dd746f4a489589ebb7b6ce345c894">&#9670;&#160;</a></span>menu_affine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_affine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5c995bdad2277e2567f8eea055c149c" name="ae5c995bdad2277e2567f8eea055c149c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c995bdad2277e2567f8eea055c149c">&#9670;&#160;</a></span>menu_affine_reccurent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_affine_reccurent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab7dd191917d12aeebd9c7b6363a37c9" name="aab7dd191917d12aeebd9c7b6363a37c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7dd191917d12aeebd9c7b6363a37c9">&#9670;&#160;</a></span>menu_gamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_gamma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a712330bf297e45bda6f4e7e191c229e5" name="a712330bf297e45bda6f4e7e191c229e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712330bf297e45bda6f4e7e191c229e5">&#9670;&#160;</a></span>menu_hill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_hill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a808faa5aeaf1911a281401f87e1d93c1" name="a808faa5aeaf1911a281401f87e1d93c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808faa5aeaf1911a281401f87e1d93c1">&#9670;&#160;</a></span>menu_permutation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_permutation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dd03cfed14f053971c95a91fd9e0d1a" name="a1dd03cfed14f053971c95a91fd9e0d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd03cfed14f053971c95a91fd9e0d1a">&#9670;&#160;</a></span>menu_recurrent_hill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_recurrent_hill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86f7372fe582e9f6f74657683a8c6071" name="a86f7372fe582e9f6f74657683a8c6071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f7372fe582e9f6f74657683a8c6071">&#9670;&#160;</a></span>menu_substitution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_substitution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b7f098ec1e810ac29a07f9f2bb65fcf" name="a7b7f098ec1e810ac29a07f9f2bb65fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7f098ec1e810ac29a07f9f2bb65fcf">&#9670;&#160;</a></span>menu_vernam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_vernam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4059822c13b062ef471acc2b2c383e98" name="a4059822c13b062ef471acc2b2c383e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4059822c13b062ef471acc2b2c383e98">&#9670;&#160;</a></span>menu_vigenere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void menu_vigenere </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72fed592ad0886d835acc67ec444521c" name="a72fed592ad0886d835acc67ec444521c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72fed592ad0886d835acc67ec444521c">&#9670;&#160;</a></span>ReadInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ReadInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prompt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da5695556841c373e11f7b1845dc0f4" name="a8da5695556841c373e11f7b1845dc0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da5695556841c373e11f7b1845dc0f4">&#9670;&#160;</a></span>ReadIntList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; int &gt; ReadIntList </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prompt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd9a0e8943a841543205c2996aff001f" name="abd9a0e8943a841543205c2996aff001f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9a0e8943a841543205c2996aff001f">&#9670;&#160;</a></span>ReadLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string ReadLine </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prompt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a704fee4a0035e1fa0c98cf450d7757fc" name="a704fee4a0035e1fa0c98cf450d7757fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704fee4a0035e1fa0c98cf450d7757fc">&#9670;&#160;</a></span>ReadMenuChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ReadMenuChoice </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc56a62a4ed719c76dfff4cc854a147e" name="acc56a62a4ed719c76dfff4cc854a147e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc56a62a4ed719c76dfff4cc854a147e">&#9670;&#160;</a></span>RestoreStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string RestoreStructure </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>letters_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
