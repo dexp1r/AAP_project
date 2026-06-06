@@ -1,4 +1,8 @@
 #pragma once
+/**
+ * @file cipher.h
+ * @brief Заголовочный файл с объявлениями функций шифрования и криптоанализа.
+ */
 #include <string>
 #include <vector>
 

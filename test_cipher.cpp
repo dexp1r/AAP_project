@@ -249,7 +249,6 @@ TEST_CASE("brute_force_affine_reccurent - recurrent cipher key brute-force") {
   CHECK(result == plain);
 }
 
-// ─── Шифр Виженера ───────────────────────────────────────────────────────────
 
 TEST_CASE("vigenere_encryption - шифрование") {
 
@@ -311,7 +310,6 @@ TEST_CASE("vigenere_cryptanalyze - криптоанализ") {
     CHECK_FALSE(vigenere_cryptanalyze(vigenere_encryption("HELLOWORLD", "B", 3), 3).empty());
 }
 
-// ─── Шифр Вернама ────────────────────────────────────────────────────────────
 
 TEST_CASE("vernam_encryption - шифрование") {
 
@@ -347,7 +345,6 @@ TEST_CASE("vernam_encryption + decryption - обратность") {
     CHECK(vernam_decryption(vernam_encryption(plain2, key2), key2) == plain2);
 }
 
-// ─── Блочная перестановка ─────────────────────────────────────────────────────
 
 TEST_CASE("permutation_encryption - шифрование") {
 

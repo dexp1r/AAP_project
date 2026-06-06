@@ -167,7 +167,7 @@ std::string vigenere_cryptanalyze(std::string ciphertext, int mode) {
                 guessed_key += best_char;
             }
 
-            // Применяем найденный ключ к ИСХОДНОМУ тексту (с сохранением знаков препинания!)
+            // Применяем найденный ключ к ИСХОДНОМУ тексту (с сохранением знаков препинания)
             std::string plain = vigenere_decryption(ciphertext, guessed_key, 1);
             double total_score = analyze_text(plain);
             if (total_score < best_score) {

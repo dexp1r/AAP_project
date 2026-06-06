@@ -8,15 +8,11 @@
 #include "cipher.h"
 #include "crypto_utils.hpp"
 
-// ── Надёжный ввод пункта меню
-// ───────────────────────────────────────────────── Читает целую строку; если
-// введено не целое число или число вне диапазона [min_val, max_val] — выводит
-// сообщение об ошибке и просит ввести снова.
 static int ReadMenuChoice(int min_val, int max_val) {
   while (true) {
     std::cout << "Choice: ";
     std::string line;
-    if (!std::getline(std::cin, line)) return min_val;  // EOF
+    if (!std::getline(std::cin, line)) return min_val;
     std::istringstream ss(line);
     int val = 0;
     char leftover = 0;
@@ -31,8 +27,6 @@ static int ReadMenuChoice(int min_val, int max_val) {
   }
 }
 
-// ── Вспомогательные функции ввода (для параметров шифров)
-// ─────────────────────
 
 static std::string ReadLine(const std::string& prompt) {
   std::cout << prompt;
@@ -65,8 +59,6 @@ static std::vector<int> ReadIntList(const std::string& prompt, int count) {
   }
 }
 
-// ── Форматирование вывода
-// ─────────────────────────────────────────────────────
 
 static std::string RestoreStructure(const std::string& original,
                                     const std::string& letters_out) {
@@ -357,24 +349,217 @@ static void menu_permutation() {
   }
 }
 
-// ── Главное меню
-// ──────────────────────────────────────────────────────────────
+static void menu_help() {
+  int choice = -1;
+  while (choice != 0) {
+    std::cout << std::endl << "Help" << std::endl;
+    std::cout << "1.  Simple Substitution Cipher" << std::endl;
+    std::cout << "2.  Hill Cipher" << std::endl;
+    std::cout << "3.  Recurrent Hill Cipher" << std::endl;
+    std::cout << "4.  Affine Cipher" << std::endl;
+    std::cout << "5.  Affine Recurrent Cipher" << std::endl;
+    std::cout << "6.  Gamma Cipher" << std::endl;
+    std::cout << "7.  Vigenere Cipher" << std::endl;
+    std::cout << "8.  Vernam Cipher" << std::endl;
+    std::cout << "9.  Block Permutation Cipher" << std::endl;
+    std::cout << "0.  Back" << std::endl;
+    choice = ReadMenuChoice(0, 9);
+
+    if (choice == 1) {
+      std::cout << R"(
+SIMPLE SUBSTITUTION CIPHER
+
+Description:
+Each letter of the plaintext is replaced by a fixed different letter.
+Key: a permutation of 26 letters (e.g. QWERTYUIOPASDFGHJKLZXCVBNM).
+  A->Q, B->W, C->E, ...
+Encryption:  ciphertext[i] = key[plaintext[i]]
+Decryption:  inverse substitution table
+
+Cryptanalysis (hill-climbing + trigrams):
+  1. Initial guess: most frequent ciphertext letter -> E, next -> T, etc.
+  2. Swap letter pairs, keep the swap if trigram score improves.
+  3. Repeat 60 times from random starting points, take the best result.
+  Needs 100+ letters for reliable recovery.
+
+Security:
+  Key space: 26! ~ 4x10^26 - brute-force is impossible.
+  Completely broken by frequency analysis on sufficiently long text.
+      )" << std::endl;
+
+    } else if (choice == 2) {
+      std::cout << R"(
+HILL CIPHER
+
+Description:
+Block cipher: plaintext is split into n-letter blocks,
+each block is multiplied by an n*n key matrix modulo 26.
+Encryption:  c = K * p  (mod 26)
+Decryption:  p = K^-1 * c  (mod 26)
+
+Key requirements:
+  Matrix must be square and invertible mod 26: gcd(det(K), 26) = 1.
+  Inverse computed via adjugate: K^-1 = det^-1 * adj(K) mod 26.
+
+Padding: if text length is not a multiple of n, letter X is appended.
+  X is stripped automatically after decryption.
+Supported block sizes for encrypt/decrypt: 1-8.
+
+Cryptanalysis (2x2 only):
+  Brute-forces all 157248 invertible 2x2 matrices mod 26.
+  Each candidate decryption is scored by trigram frequency.
+  Larger block sizes are computationally infeasible to brute-force.
+      )" << std::endl;
+
+    } else if (choice == 3) {
+      std::cout << R"(
+RECURRENT HILL CIPHER
+
+Description:
+Extension of Hill cipher with m key matrices K1, K2, ..., Km.
+Block i (1-based) is encrypted with K_((i-1 mod m)+1) - matrices cycle.
+  Block 0 -> K1, Block 1 -> K2, ..., Block m -> K1, ...
+
+Cryptanalysis (2x2 only):
+  Blocks 0, m, 2m, ... share K1 -> brute-force K1 from those blocks only.
+  Blocks 1, m+1, 2m+1, ... share K2 -> brute-force K2 independently.
+  Total candidates: m * 157248 (linear, NOT exponential).
+  Needs ~40+ ciphertext letters per matrix for reliable recovery.
+      )" << std::endl;
+
+    } else if (choice == 4) {
+      std::cout << R"(
+AFFINE CIPHER
+
+Description:
+Each letter of the plaintext is encrypted by the formula:
+Encryption:  y = (a * x + b) mod 26
+Decryption: x = a_inv * (y - b) mod 26
+where x - plaintext letter index (A=0, B=1, ..., Z=25),
+y - ciphertext letter index,
+a, b - key pair,
+a_inv - modular inverse of a modulo 26.
+
+Important!
+    a must be coprime with 26, otherwise decryption is ambiguous.
+    Valid values of a: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25
+    b - any number from 0 to 25 (larger values will be reduced mod 26).
+
+Security:
+    Key space: 12 * 26 = 312 - easily exhausted by brute-force.
+    Vulnerable to frequency analysis: the most frequent ciphertext letter likely corresponds to E.
+    Knowing 2 plaintext-ciphertext letter pairs, the key is recovered immediately via a system of equations.
+        )" << std::endl;
+
+    } else if (choice == 5) {
+      std::cout << R"(
+AFFINE RECURRENT CIPHER
+
+Description:
+Each letter has its own key computed from previous keys.
+Two initial pairs are provided: (a0, b0) and (a1, b1).
+Subsequent keys are computed as:
+    a_i = (a_{i-2} * a_{i-1}) mod 26
+    b_i = (b_{i-2} + b_{i-1}) mod 26
+Encryption of each letter: y = (a_i * x + b_i) mod 26
+Decryption of each letter: x = a_i_inv * (y - b_i) mod 26
+
+Important!
+    a0 and a1 must be coprime with 26.
+    Valid values: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25
+
+Security:
+    Frequency analysis is harder - each letter is encrypted differently.
+    However, keys follow a fixed recurrence, and the number of initial pairs is finite, so brute-force is possible.
+    With a known plaintext fragment, the initial keys can be recovered and the full message decrypted.
+        )" << std::endl;
+
+    } else if (choice == 6) {
+      std::cout << R"(
+GAMMA CIPHER
+
+How it works:
+A gamma (key sequence) is applied to the plaintext:
+Encryption:  y_i = (x_i + gamma_i) mod 26
+Decryption: x_i = (y_i - gamma_i + 26) mod 26
+The gamma repeats cyclically if it is shorter than the text.
+
+Modes:
+Random gamma - the program generates a gamma equal to the text length.
+    Save the gamma. Decryption is impossible without the key.
+Custom gamma - your own key sequence.
+
+Security:
+    A short gamma is vulnerable: identical text fragments at the same positions produce identical ciphertext.
+    The gamma length can be found from repeat distances (Kasiski test), then frequency analysis is applied per position.
+    A long random gamma is significantly more secure.
+    With a known plaintext fragment, the gamma is recovered directly: gamma_i = (y_i - x_i + 26) mod 26.
+        )" << std::endl;
+
+    } else if (choice == 7) {
+      std::cout << R"(
+VIGENERE CIPHER
+
+Description:
+  Uses a keyword to shift letters based on the Vigenere square.
+  Supports 3 modes:
+  1. Repeat short keyword.
+  2. Plaintext autokey (key is padded with plaintext).
+  3. Ciphertext autokey (key is padded with ciphertext).
+
+Security:
+  Vulnerable to Kasiski examination and frequency analysis.
+  Autokey modes are slightly stronger but can still be broken.
+)" << std::endl;
+
+    } else if (choice == 8) {
+      std::cout << R"(
+VERNAM CIPHER (One-Time Pad)
+
+Description:
+  Modular addition of plaintext and a random key of the SAME length.
+  
+Security:
+  Possesses PERFECT SECRECY (absolute cryptographic strength) if the key is truly random and never reused.
+  Brute-force yields all possible plaintexts with equal probability.
+)" << std::endl;
+
+    } else if (choice == 9) {
+      std::cout << R"(
+BLOCK PERMUTATION CIPHER
+
+Description:
+  Divides text into blocks and scrambles the letters within each block.
+  The permutation order is derived alphabetically from a text keyword.
+  Example: Key "CAB" -> Order: 2, 0, 1.
+
+Security:
+  Vulnerable to frequency analysis of n-grams. Brute-forcing block sizes and permutations is effective for small keys.
+)" << std::endl;
+
+    } else if (choice != 0) {
+      std::cout << "Unknown command..." << std::endl;
+    }
+  }
+}
+
 
 int main() {
   int choice = -1;
   while (choice != 0) {
     std::cout << "\nMenu\n"
-              << "1. Simple Substitution Cipher\n"
-              << "2. Hill Cipher\n"
-              << "3. Recurrent Hill Cipher\n"
-              << "4. Affine Cipher\n"
-              << "5. Affine Recurrent Cipher\n"
-              << "6. Gamma Cipher\n"
-              << "7. Vigenere Cipher\n"
-              << "8. Vernam Cipher\n"
-              << "9. Block Permutation Cipher\n"
-              << "0. Exit\n";
-    choice = ReadMenuChoice(0, 9);
+              << "1.  Simple Substitution Cipher\n"
+              << "2.  Hill Cipher\n"
+              << "3.  Recurrent Hill Cipher\n"
+              << "4.  Affine Cipher\n"
+              << "5.  Affine Recurrent Cipher\n"
+              << "6.  Gamma Cipher\n"
+              << "7.  Vigenere Cipher\n"
+              << "8.  Vernam Cipher\n"
+              << "9.  Block Permutation Cipher\n"
+              << "10. Help\n"
+              << "0.  Exit\n";
+    choice = ReadMenuChoice(0, 10);
     try {
       if (choice == 1)
         menu_substitution();
@@ -394,6 +579,8 @@ int main() {
         menu_vernam();
       else if (choice == 9)
         menu_permutation();
+      else if (choice == 10)
+        menu_help();
     } catch (const std::exception& e) {
       std::cerr << "Error :( :  " << e.what() << "\n";
     }

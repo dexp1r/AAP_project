@@ -6,8 +6,6 @@
 #include "ciphers.hpp"
 #include "crypto_utils.hpp"
 
-// Оборачивают классы crypto:: в бесплатные функции в стиле cipher.h.
-// Исключения crypto::CipherError конвертируются в std::invalid_argument.
 
 std::string simple_substitution_encrypt(std::string plaintext,
                                         std::string key) {
